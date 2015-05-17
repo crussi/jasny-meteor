@@ -1,10 +1,9 @@
 <head>
     <title>jasny-meteor</title>
 </head>
-{{> content}}
+
 <body>
-
-
+  {{> content}}
 </body>
 <template name="content">
     <nav id="navx" class="navbar navbar-default navbar-fixed-top">
@@ -30,7 +29,10 @@
     <div class="container" style="background-color: lightgreen">
         <p style="vertial-align: middle; text-align: center; width: 100%; margin-top: 200px;">hello world</p>
     </div>
+    {{>menu}}
 
+</template>
+<template name="menu">
     <nav id="menu" class="before-move">
         <ul>
             <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
@@ -44,4 +46,8 @@
             <li><a href="#/contact"><i class="fa fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
+
+</template>
+<template name="menuitem">
+    <li href="#">{{text}}</li>
 </template>
