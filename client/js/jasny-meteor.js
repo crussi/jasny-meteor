@@ -5,13 +5,17 @@ if (Meteor.isClient) {
     //}
   });
   Template.menu.rendered = function() {
-    $("#menu").mmenu({extensions: ["widescreen"]}).on('click',
-        'a[href^="#/"]',
-        function() {
-          closeMenu();
-          return false;
-        }
-    );
+    $(document).ready(function(){
+        $("#menu").mmenu({extensions: ["widescreen"]}).on('click',
+            'a[href^="#/"]',
+            function() {
+                closeMenu();
+                return false;
+            }
+        );
+
+    });
+
 
   }
 }
