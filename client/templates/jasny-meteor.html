@@ -1,14 +1,47 @@
 <head>
-  <title>jasny-meteor</title>
+    <title>jasny-meteor</title>
 </head>
-
+{{> content}}
 <body>
-  <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+
 </body>
+<template name="content">
+    <nav id="navx" class="navbar navbar-default navbar-fixed-top">
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-target=".navmenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container" style="background-color: lightgreen">
+        <p style="vertial-align: middle; text-align: center; width: 100%; margin-top: 200px;">hello world</p>
+    </div>
+
+    <nav id="menu" class="before-move">
+        <ul>
+            <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#/about"><i class="fa fa-user"></i> About us</a>
+                <ul>
+                    <li><a href="#/"><i class="fa fa-user"></i> Team</a></li>
+                    <li><a href="#/"><i class="fa fa-user"></i> Leadership</a></li>
+                    <li><a href="#/"><i class="fa fa-user"></i> Contact Us</a></li>
+                </ul>
+            </li>
+            <li><a href="#/contact"><i class="fa fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
 </template>
