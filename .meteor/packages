@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 jquery
 ixdi:material-design-iconic-font
@@ -15,3 +14,5 @@ fortawesome:fontawesome
 less
 jasny:bootstrap
 anonyfox:mmenu
+meteorhacks:flow-router
+meteorhacks:flow-layout

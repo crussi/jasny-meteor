@@ -29,25 +29,34 @@
     <div class="container" style="background-color: lightgreen">
         <p style="vertial-align: middle; text-align: center; width: 100%; margin-top: 200px;">hello world</p>
     </div>
-    {{>menu}}
-
+    {{#if isReady "menuItems"}}
+        {{>menu}}
+    {{else}}
+        Loading ...
+    {{/if}}
 </template>
 <template name="menu">
     <nav id="menu" class="before-move">
         <ul>
-            <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#/about"><i class="fa fa-user"></i> About us</a>
-                <ul>
-                    <li><a href="#/"><i class="fa fa-user"></i> Team</a></li>
-                    <li><a href="#/"><i class="fa fa-user"></i> Leadership</a></li>
-                    <li><a href="#/"><i class="fa fa-user"></i> Contact Us</a></li>
-                </ul>
-            </li>
-            <li><a href="#/contact"><i class="fa fa-envelope"></i> Contact</a></li>
+            <!--<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>-->
+            <!--<li><a href="#/about"><i class="fa fa-user"></i> About us</a>-->
+                <!--<ul>-->
+                    <!--<li><a href="#/"><i class="fa fa-user"></i> Team</a></li>-->
+                    <!--<li><a href="#/"><i class="fa fa-user"></i> Leadership</a></li>-->
+                    <!--<li><a href="#/"><i class="fa fa-user"></i> Contact Us</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <!--<li><a href="#/contact"><i class="fa fa-envelope"></i> Contact</a></li>-->
+
+                {{#each menuitems}}
+                    {{> menuitem}}
+                {{/each}}
+
         </ul>
+
     </nav>
 
 </template>
 <template name="menuitem">
-    <li href="#">{{text}}</li>
+    <li><a href="#/"><i class="fa fa-home"></i> {{text}}</a></li>
 </template>
