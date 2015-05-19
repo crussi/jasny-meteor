@@ -17,11 +17,13 @@ if (Meteor.isClient) {
         },
         action: function() {
             console.log('flow action');
-            FlowLayout.render('menu');
+            //FlowLayout.render('menu');
         }
     });
     Template.content.helpers({
         isReady: function(sub){
+            console.log("check if isReady");
+
             if(sub){
                 return FlowRouter.subsReady(sub);
             } else {
@@ -32,10 +34,12 @@ if (Meteor.isClient) {
     Template.menu.helpers({
 
         menuitems: function () {
+            console.log("returning menuitems");
             return MenuItems.find({});
         }
     });
     Template.menu.rendered = function() {
+        console.log("menu rendered");
         $("#menu").mmenu({extensions: ["widescreen"]}).on('click',
             'a[href^="#/"]',
             function() {
