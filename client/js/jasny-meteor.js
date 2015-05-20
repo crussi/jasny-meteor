@@ -6,12 +6,7 @@
 
     });
 
-    //Meteor.subscribe("menuitems",function() {
-    //    console.log('subscribe data loaded');
-    //    Session.set('data_loaded', true);
-    //});
-
-    Template.body.helpers({
+    Template.layout.helpers({
         isReady: function(sub){
             console.log("check if isReady");
 
@@ -22,7 +17,7 @@
             }
         }
     });
-    Template.content.events({
+    Template.header.events({
         "click .navbar-toggle": function () {
             navbarToggle();
         }

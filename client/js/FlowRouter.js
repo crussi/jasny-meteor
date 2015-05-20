@@ -8,5 +8,9 @@ FlowRouter.route('/',{
     action: function() {
         console.log('flow action');
         //FlowLayout.render('menu');
+        //if (!Meteor.user()) {
+            FlowLayout.render('layout-unauth', { header: "header-unauth", content: "content-mktg"});
+        //}
+
     }
 });

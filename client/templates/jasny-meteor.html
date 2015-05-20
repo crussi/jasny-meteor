@@ -3,15 +3,28 @@
 </head>
 
 <body>
-    {{>header}}
-    {{> content}}
+
+</body>
+<template name="layout">
+    {{> Template.dynamic template=header}}
+    {{> Template.dynamic template=content}}
     {{#if isReady "menuItems"}}
         {{>menu}}
     {{else}}
         Loading ...
     {{/if}}
-</body>
+</template>
 
+<template name="layout-unauth">
+    {{> Template.dynamic template=header}}
+    {{> Template.dynamic template=content}}
+</template>
+
+<template name="header-unauth">
+    <nav id="navx" class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#">Toduo</a>
+    </nav>
+</template>
 <template name="header">
     <nav id="navx" class="navbar navbar-default navbar-fixed-top">
 
@@ -37,6 +50,13 @@
 
     <div class="container" style="background-color: lightgreen">
         <p style="vertial-align: middle; text-align: center; width: 100%; margin-top: 200px;">hello world</p>
+    </div>
+
+</template>
+<template name="content-mktg">
+
+    <div class="container" style="background-color: lightblue">
+        <p style="vertial-align: middle; text-align: center; width: 100%; margin-top: 200px;">welcome to toduo</p>
     </div>
 
 </template>
