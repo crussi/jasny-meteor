@@ -1,6 +1,6 @@
 
 
-if (Meteor.isClient) {
+//if (Meteor.isClient) {
 
     Meteor.startup(function() {
 
@@ -10,17 +10,8 @@ if (Meteor.isClient) {
     //    console.log('subscribe data loaded');
     //    Session.set('data_loaded', true);
     //});
-    FlowRouter.route('/',{
-        subscriptions: function(params) {
-            console.log('flow sub');
-            this.register('menuItems', Meteor.subscribe('menu-items'));
-        },
-        action: function() {
-            console.log('flow action');
-            //FlowLayout.render('menu');
-        }
-    });
-    Template.content.helpers({
+
+    Template.body.helpers({
         isReady: function(sub){
             console.log("check if isReady");
 
@@ -37,7 +28,6 @@ if (Meteor.isClient) {
         }
     });
     Template.menu.helpers({
-
         menuitems: function () {
             console.log("returning menuitems");
             return MenuItems.find({});
@@ -68,6 +58,6 @@ if (Meteor.isClient) {
             }
         }
 
-}
+//}
 
 
