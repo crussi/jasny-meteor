@@ -5,7 +5,7 @@
 <body>
 
 </body>
-<template name="layout">
+<template name="layout-auth">
     {{> Template.dynamic template=header}}
     {{> Template.dynamic template=content}}
     {{#if isReady "menuItems"}}
@@ -15,9 +15,12 @@
     {{/if}}
 </template>
 
+
 <template name="layout-unauth">
     {{> Template.dynamic template=header}}
+
     {{> Template.dynamic template=content}}
+
 </template>
 
 <template name="header-unauth">
@@ -26,11 +29,17 @@
             <a class="navbar-brand" href="#">Toduo</a>
         </div>
         <div class="nav navbar-nav collapse navbar-collapse navbar-right">
-            {{> loginButtons}}
+            <div>
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a id="signin" href="#">Sign in</a></li>
+                    <li role="presentation" class="active"><a id="signup" href="#">Sign up</a></li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 </template>
-<template name="header">
+<template name="header-auth">
     <nav id="navx" class="navbar navbar-default navbar-fixed-top">
 
         <div class="navbar-header">
@@ -51,7 +60,7 @@
     </nav>
 </template>
 
-<template name="content">
+<template name="app">
 
     <div class="container" style="background-color: lightgreen">
         <p style="vertial-align: middle; text-align: center; width: 100%; margin-top: 200px;">hello world</p>

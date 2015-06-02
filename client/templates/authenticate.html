@@ -1,0 +1,177 @@
+<template name="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <h1 class="text-center login-title login-logo">Toduo</h1>
+                <h2 class="text-center login-title login-slogan">Get things done better, together</h2>
+                <h3 class="text-center login-title login-instructions">Sign in to continue</h3>
+                {{> loginform }}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <h1 class="text-center login-title login-logo">Toduo</h1>
+                <h2 class="text-center login-title login-slogan">Get things done better, together</h2>
+                <h3 class="text-center login-title login-instructions">Create your new account</h3>
+                {{> registerform }}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="help-login">
+    <div class="container">
+        <p>help login</p>
+        <a href="#" id="back">back</a>
+    </div>
+</template>
+
+<template name="help-register">
+    <div class="container">
+        <p>help register</p>
+        <a href="#" id="back">back</a>
+    </div>
+</template>
+
+<template name="loginform">
+    <div class="account-wall">
+        <img class="profile-img" src="images/profile.png" alt="">
+        {{#authFormBlock type="login" schema=schema action=action}}
+
+            {{> authInput id='login-email' type='email' field='email'}}
+            {{> authInput id='login-password' type='password' field='password'}}
+
+        {{/authFormBlock}}
+    </div>
+    <a href="#" id="register" class="text-center new-account">Create an account </a>
+</template>
+
+<template name="registerform">
+    <div class="account-wall">
+        <img class="profile-img" src="images/profile.png" alt="">
+        {{#authFormBlock type="register" schema=schema action=action}}
+            {{> authInput type='email' field='email'}}
+            {{> authInput type='password' field='password'}}
+            {{> authInput type='password' field='confirmpswd'}}
+        {{/authFormBlock}}
+    </div>
+    <a href="#" id="signin" class="text-center new-account">Sign in </a>
+</template>
+
+<template name="authInput">
+
+    <div class="form-group {{errorClass submitted errorMessage}}">
+        <input id={{id}} type={{type}} placeholder={{label}} class="form-control reactive-element" value={{value}}>
+
+        {{#if submitted}}
+            {{#if errorMessage}}<label class="control-label">{{errorMessage}}</label>{{/if}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="authFormBlock">
+    <form class="form-auth">
+        {{#if isLogin}}
+            <p class="text-muted">Sign in with your favorite social network</p>
+        {{else}}
+            <p class="text-muted">Sign up with your favorite social network</p>
+        {{/if}}
+        <div class="social-buttons">
+            <p>
+                <a class="btn social-login-btn social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="btn social-login-btn social-google" href="#"><i class="fa fa-google-plus"></i></a>
+                <a class="btn social-login-btn social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+            </p>
+
+        </div>
+
+
+        <div class="at-sep text-muted">
+            <p>Or</p>
+        </div>
+        {{!-- Using a helper to pass in form-level context --}}
+        {{> Template.contentBlock data=data context=context }}
+        {{#if isLogin}}
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <label class="checkbox pull-left">
+                <input type="checkbox" value="remember-me">
+                Stay signed in
+            </label>
+        {{else}}
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        {{/if}}
+        <a href="#" id="help" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+      <span>
+        {{#if loading}}
+            Loading...
+        {{/if}}
+
+          {{#if invalid}}
+              Can't submit! There are {{invalidCount}} invalid fields!
+          {{/if}}
+
+          {{#if failed}}
+              There was a problem submitting the form!
+          {{/if}}
+
+          {{#if success}}
+              Success! Form submitted (to nowhere)
+          {{/if}}
+      </span>
+
+    </form>
+</template>
+
+<template name="coreInput">
+
+    {{!-- The form elements in these components need to have the reactive-element class --}}
+    <input placeholder={{label}} class="reactive-element" value={{value}}>
+
+    {{#if submitted}}
+        {{#if errorMessage}}<p class="error-message">{{errorMessage}}</p>{{/if}}
+    {{/if}}
+</template>
+
+<template name="coreFormBlock">
+    <form>
+
+        {{!-- Using a helper to pass in form-level context --}}
+        {{> Template.contentBlock data=data context=context }}
+
+        <p>
+            <button type="submit">Submit</button>
+      <span>
+        {{#if loading}}
+            Loading...
+        {{/if}}
+
+          {{#if invalid}}
+              Can't submit! There are {{invalidCount}} invalid fields!
+          {{/if}}
+
+          {{#if failed}}
+              There was a problem submitting the form!
+          {{/if}}
+
+          {{#if success}}
+              Success! Form submitted (to nowhere)
+          {{/if}}
+      </span>
+        </p>
+
+    </form>
+</template>
+
+<template name="defaultCoreFormBlock">
+    <form>
+
+        {{!-- Using a helper to pass in form-level context --}}
+        {{> Template.contentBlock data=data context=context }}
+
+    </form>
+</template>

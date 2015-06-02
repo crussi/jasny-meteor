@@ -6,7 +6,7 @@
 
     });
 
-    Template.layout.helpers({
+    Template['layout-auth'].helpers({
         isReady: function(sub){
             console.log("check if isReady");
 
@@ -17,11 +17,24 @@
             }
         }
     });
+    Template['header-unauth'].events({
+        'click #signin' : function(e, t) {
+            console.log('signin');
+            FlowRouter.go('/signin');
+        },
+        'click #signup' : function(e, t) {
+            console.log('signup');
+            FlowRouter.go('/signup');
+
+        }
+    });
+
     Template.header.events({
         "click .navbar-toggle": function () {
             navbarToggle();
         }
     });
+
     Template.menu.helpers({
         menuitems: function () {
             console.log("returning menuitems");
