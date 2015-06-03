@@ -13,13 +13,13 @@ Template['authInput'].helpers({
 });
 
 Template['authFormBlock'].helpers({
-    isLogin : function() {
-        return this.type.toUpperCase() === 'LOGIN';
+    isSignin : function() {
+        return this.type.toUpperCase() === 'SIGNIN';
 
     }
 });
 
-Template['loginform'].helpers({
+Template['signinform'].helpers({
     schema: function () {
         return new SimpleSchema({
             email: {
@@ -58,7 +58,6 @@ Template['loginform'].helpers({
                     console.log("login with password success");
                     callbacks.success(); // Display success message.
                     callbacks.reset();
-                    //FlowLayout.render('layout-auth', { content: "app" });
                     FlowRouter.go('/app');
                 }
 
@@ -68,16 +67,14 @@ Template['loginform'].helpers({
     }
 });
 
-Template['loginform'].events({
-    'click #register' : function(e, t) {
+Template['signinform'].events({
+    'click #signup' : function(e, t) {
         e.preventDefault();
-        console.log("register");
-        //FlowLayout.render('layout-unauth', { content: "register"});
         FlowRouter.go('/signup');
     }
 });
 
-Template['registerform'].helpers({
+Template['signupform'].helpers({
     schema: function () {
         return new SimpleSchema({
             email: {
@@ -115,14 +112,13 @@ Template['registerform'].helpers({
                     // The user might not have been found, or their passwword
                     // could be incorrect. Inform the user that their
                     // login attempt has failed.
-                    console.log("register with password failed");
+                    console.log("sign up with password failed");
                     callbacks.failed(); // Display error message.
                 } else {
                     // The user has been logged in.
-                    console.log("register with password success");
+                    console.log("signup with password success");
                     callbacks.success(); // Display success message.
                     callbacks.reset();
-                    //FlowLayout.render('layout-unauth', { content: "login" });
                     FlowRouter.go('/signin');
                 }
 
@@ -132,11 +128,11 @@ Template['registerform'].helpers({
     }
 });
 
-Template['registerform'].events({
+Template['signupform'].events({
     'click #signin' : function(e, t) {
         e.preventDefault();
-        console.log("login");
-        //FlowLayout.render('layout-unauth', { content: "login"});
+        console.log("signin");
+        //FlowLayout.render('layout-unauth', { content: "signin"});
         FlowRouter.go('/signin');
     }
 });
@@ -188,11 +184,8 @@ Template['authFormBlock'].events({
             requestPermissions: ['email']
         }, function(error) {
             if (error) {
-                console.log('twitter login error');
                 return console.log(error.reason);
             } else {
-                console.log('twitter login success');
-                //FlowLayout.render('layout-auth', { content: "app" });
                 FlowRouter.go('/app');
             }
         });
@@ -200,18 +193,16 @@ Template['authFormBlock'].events({
 });
 
 
-Template['help-login'].events({
+Template['help-signin'].events({
     'click #back' : function(e, t) {
         e.preventDefault();
-        //FlowLayout.render('layout-unauth', { content: "login"});
         FlowRouter.go('/signin');
     }
 });
 
-Template['help-register'].events({
+Template['help-signup'].events({
     'click #back' : function(e, t) {
         e.preventDefault();
-        //FlowLayout.render('layout-unauth', { content: "register"});
         FlowRouter.go('/signup');
     }
 });
@@ -220,7 +211,6 @@ Template['app'].events({
     'click #logout' : function(e, t) {
         e.preventDefault();
         Meteor.logout();
-        //FlowLayout.render('layout-unauth', { content: "login"});
         FlowRouter.go('/signin');
     }
 });

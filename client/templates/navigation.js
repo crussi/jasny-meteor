@@ -27,7 +27,7 @@ Template['menu'].rendered = function() {
     );
 }
 
-Template['header'].events({
+Template['header-auth'].events({
     "click .navbar-toggle": function () {
         navbarToggle();
     }
