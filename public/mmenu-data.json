@@ -1,0 +1,169 @@
+
+	{
+		"icon": "md-inbox",
+		"text": "Inbox",
+		"order": 1.0,
+		"subitems": []
+	},
+	{
+		"icon": "md-check-box",
+		"text": "Next",
+		"order": 2.0,
+		"subitems": [
+			{
+				"icon": "md-today",
+				"text": "Today",
+				"order": 2.1,
+				"subitems": []				
+			},
+			{
+				"icon": "md-event-note",
+				"text": "This Week",
+				"order": 2.2,
+				"subitems": []				
+			},
+			{
+				"icon": "md-event-available",
+				"text": "Soon",
+				"order": 2.3,
+				"subitems": []				
+			}			
+		]
+	},
+	{
+		"icon": "md-star",
+		"text": "Focus",
+		"order": 3.0,
+		"subitems": []
+	},
+	{
+		"icon": "md-account-box",
+		"text": "Waiting for",
+		"order": 4.0,
+		"subitems": []
+	},
+	{
+		"icon": "md-schedule",
+		"text": "Scheduled",
+		"order": 5.0,
+		"subitems": [
+			{
+				"icon": "md-today",
+				"text": "Calendar",
+				"order": 5.1,
+				"subitems": []				
+			},
+			{
+				"icon": "md-notifications",
+				"text": "Reminders",
+				"order": 5.2,
+				"subitems": []				
+			}		
+		]
+	},
+	{
+		"icon": "md-pause",
+		"text": "Someday",
+		"order": 6.0,
+		"subitems": []
+	},	
+	{
+		"icon": "md-content-paste",
+		"text": "Projects",
+		"order": 7.0,
+		"subitems": [
+			{
+				"icon": "md-assignment",
+				"text": "Project 1",
+				"order": 7.1,
+				"subitems": []				
+			},
+			{
+				"icon": "md-assignment",
+				"text": "Project 2",
+				"order": 7.2,
+				"subitems": []				
+			},
+			{
+				"icon": "md-assignment",
+				"text": "Project 3",
+				"order": 7.3,
+				"subitems": []				
+			}					
+		]
+	},
+	{
+		"icon": "md-local-cafe",
+		"text": "Review",
+		"order": 8.0,
+		"subitems": []
+	},
+	{
+		"icon": "md-list",
+		"text": "Lists",
+		"order": 9.0,
+		"subitems": [
+			{
+				"icon": "md-list",
+				"text": "Checklists",
+				"order": 9.1,
+				"subitems": []				
+			},
+			{
+				"icon": "md-book",
+				"text": "Reference",
+				"order": 9.2,
+				"subitems": []				
+			},
+			{
+				"icon": "md-archive",
+				"text": "Done",
+				"order": 9.3,
+				"subitems": []				
+			},
+			{
+				"icon": "md-delete",
+				"text": "Trash",
+				"order": 9.4,
+				"subitems": []				
+			}									
+		]
+	},	
+	{
+		"icon": "md-place",
+		"text": "Contexts",
+		"order": 10.0,
+		"subitems": [
+			{
+				"icon": "md-local-offer",
+				"text": "Roles",
+				"order": 10.1,
+				"subitems": []				
+			},
+			{
+				"icon": "md-place",
+				"text": "Contexts",
+				"order": 10.2,
+				"subitems": []				
+			},
+			{
+				"icon": "md-flag",
+				"text": "Flags",
+				"order": 10.3,
+				"subitems": []				
+			},
+			{
+				"icon": "md-account-box",
+				"text": "Delegates",
+				"order": 10.4,
+				"subitems": []				
+			}									
+		]
+	},		
+	{
+		"icon": "md-settings",
+		"text": "Settings",
+		"order": 11.0,
+		"subitems": []
+	}	
+
