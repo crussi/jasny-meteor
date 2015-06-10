@@ -1,3 +1,4 @@
+//hello world 
 Template['header-unauth'].events({
     'click #signin' : function(e, t) {
         console.log('signin');
