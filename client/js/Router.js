@@ -41,10 +41,10 @@ FlowRouter.route('/signup',{
 FlowRouter.route('/app',{
     subscriptions: function(params) {
         console.log('flow sub');
-
+        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
     },
     action: function() {
-        console.log('/signup route');
+        console.log('/app route');
         FlowLayout.render('layout-auth', { header: "header-auth", content: "app"});
     }
 });

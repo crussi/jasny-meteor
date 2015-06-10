@@ -9,7 +9,6 @@ insecure
 jquery
 ixdi:material-design-iconic-font
 msavin:mongol
-fortawesome:fontawesome
 less
 jasny:bootstrap
 anonyfox:mmenu
@@ -23,4 +22,4 @@ templates:forms
 accounts-facebook
 accounts-twitter
 crussi:bootstrap3-todc
-twbs:bootstrap
+fortawesome:fontawesome
