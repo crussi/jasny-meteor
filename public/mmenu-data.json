@@ -1,4 +1,4 @@
-
+[
 	{
 		"icon": "md-inbox",
 		"text": "Inbox",
@@ -166,4 +166,4 @@
 		"order": 11.0,
 		"subitems": []
 	}	
-
+]
