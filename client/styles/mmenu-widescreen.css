@@ -72,3 +72,8 @@
         z-index: 1;
     }
 }
+@media (max-width: 749px) {
+    #mm-blocker {
+        margin-top: 50px;
+    }
+}

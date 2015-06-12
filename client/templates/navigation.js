@@ -1,4 +1,4 @@
-//hello world 
+//hello world
 Template['header-unauth'].events({
     'click #signin' : function(e, t) {
         console.log('signin');
@@ -35,11 +35,13 @@ Template['header-auth'].events({
 });
 
 function navbarToggle () {
+    console.log('navbar-toggle');
     $("#menu").toggleClass("mm-current").toggleClass("mm-opened");
     $("html").toggleClass("mm-widescreen").toggleClass("mm-opened").toggleClass("mm-opening");
 }
 
 function closeMenu () {
+    console.log('closeMenu');
     if ($("#menu").hasClass("mm-current")) {
         $("#menu").removeClass("mm-current");
         $("html").removeClass("mm-opened").removeClass("mm-opening");

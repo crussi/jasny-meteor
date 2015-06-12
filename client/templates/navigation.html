@@ -16,8 +16,7 @@
 </template>
 
 <template name="header-auth">
-    <nav id="navx" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-
+    <nav id="nav-auth" class="navbar navbar-inverse navbar-default navbar-fixed-top">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-target=".navmenu">
                 <span class="icon-bar"></span>
@@ -38,8 +37,11 @@
 </template>
 
 
+
 <template name="menu">
+
     <nav id="menu" class="before-move">
+        {{>logo}}
         <ul>
             {{#each menuitems}}
                 {{> menuitem}}
@@ -48,7 +50,11 @@
     </nav>
 
 </template>
-
+<template name="logo">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#">Toduoxx</a>
+    </nav>
+</template>
 <template name="menuitem">
 
     <li><a href="#/"><i class="md {{icon}}"></i> {{text}}</a>
