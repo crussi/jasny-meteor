@@ -69,11 +69,15 @@ a.navbar-brand nav#nav-auth nav.mm-opened {
     .navbar-toggle {
         display: block;
     }
-    .navbar-brand {
+    nav#nav-auth a.navbar-brand {
         margin-left: 60px;
+    }
+    nav#nav-logo a.navbar-brand {
+        margin-left: 10px;
     }
     .mm-menu {
         z-index: 0;
+        overflow: visible;
     }
     .mm-menu.mm-offcanvas {
         display: block;

@@ -41,7 +41,7 @@
 <template name="menu">
 
     <nav id="menu" class="before-move">
-        {{>logo}}
+        <!--{{>logo}}-->
         <ul>
             {{#each menuitems}}
                 {{> menuitem}}
@@ -51,8 +51,8 @@
 
 </template>
 <template name="logo">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <a class="navbar-brand" href="#">Toduoxx</a>
+    <nav id="nav-logo" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+        <a class="navbar-brand" href="#">Toduo</a>
     </nav>
 </template>
 <template name="menuitem">
