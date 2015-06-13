@@ -20,10 +20,10 @@ html.mm-opened nav#nav-auth a.navbar-brand {
     opacity:0;
     transition:opacity 0.35s linear;
 }
-a.navbar-brand nav#nav-auth nav.mm-opened {
-    opacity:1;
-    transition:opacity 0.35s linear;
-}
+/*a.navbar-brand nav#nav-auth nav.mm-opened {*/
+    /*opacity:1;*/
+    /*transition:opacity 0.35s linear;*/
+/*}*/
 .navbar-brand {
     display: inline-block;
     float: none;

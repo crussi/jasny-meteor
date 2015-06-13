@@ -1,4 +1,6 @@
-//hello world
+
+
+
 Template['header-unauth'].events({
     'click #signin' : function(e, t) {
         console.log('signin');
@@ -26,6 +28,7 @@ Template['menu'].rendered = function() {
             return false;
         }
     );
+    resizeSlideout();
 }
 
 Template['header-auth'].events({
@@ -33,6 +36,10 @@ Template['header-auth'].events({
         navbarToggle();
     }
 });
+
+function menuResize() {
+    console.log('menuResize');
+}
 
 function navbarToggle () {
     console.log('navbar-toggle');
