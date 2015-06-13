@@ -14,7 +14,8 @@ body {
 .navbar {
     display: block;
     /*text-align: center;*/
-    height: 50px;
+    height: 60px;
+    /*box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);*/
 }
 /* TODO: remember to put in vendor prefixes */
 /*html.mm-opened nav#nav-auth button.navbar-toggle,*/
@@ -39,18 +40,25 @@ nav#nav-auth.mm-closed a.navbar-brand
     /*opacity:1;*/
     /*transition:opacity 0.35s linear;*/
 /*}*/
-.navbar-brand {
-    display: inline-block;
-    float: none;
-    margin-top: 10px;
-    font-size: 20px;
-}
+
+
+/*.navbar-brand {*/
+    /*display: inline-block;*/
+    /*float: none;*/
+    /*margin-top: 10px;*/
+    /*font-size: 20px;*/
+/*}*/
 
 .navbar-toggle {
     position: absolute;
     float: left;
     margin-left: 15px;
     margin-top: 10px;
+}
+
+.navbar.navbar, .navbar-default.navbar {
+    background-color: #4285f4;
+    color: rgba(255, 255, 255, 0.84);
 }
 
 .container {
@@ -135,7 +143,7 @@ nav#nav-auth.mm-closed a.navbar-brand
 }
 
 .mm-menu.mm-widescreen {
-    margin-top: 51px;
+    margin-top: 61px;
 }
 
 /* bootstrap overrides */

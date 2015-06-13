@@ -25,9 +25,23 @@
             $(window).resize(function(){
                 resizeSlideout();
             });
+            $(function() {
+                console.log('material design init');
+                console.log($.material.init);
+                $.material.init();
+                $.material.ripples();
+            });
         });
     });
 
+    Template['layout-unauth'].onRendered(function () {
+        $(function() {
+            console.log('material design init');
+            console.log($.material.init);
+            $.material.init();
+            //$.material.ripples();
+        });
+    });
 
     Template['layout-auth'].helpers({
         isReady: function(sub){
