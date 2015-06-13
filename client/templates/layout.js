@@ -10,6 +10,7 @@
         //TODO: make 750 a global variable
         if (winWidth < 750) {
             $('.mm-slideout').width(winWidth).css('margin-left',0);
+            closeMenu();
             return;
         }
         mnuWidth = mnuWidth || defWidth;

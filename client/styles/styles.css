@@ -16,9 +16,24 @@ body {
     /*text-align: center;*/
     height: 50px;
 }
-html.mm-opened nav#nav-auth a.navbar-brand {
+/* TODO: remember to put in vendor prefixes */
+/*html.mm-opened nav#nav-auth button.navbar-toggle,*/
+/*html.mm-opened nav#nav-auth a.navbar-brand*/
+nav#nav-auth.mm-opened button.navbar-toggle,
+nav#nav-auth.mm-opened a.navbar-brand
+{
+    /*opacity:0;*/
+    /*transition:opacity 0.15s linear;*/
+    visibility:hidden;
     opacity:0;
-    transition:opacity 0.35s linear;
+    transition:visibility 0s linear 0.15s,opacity 0.15s linear;
+}
+nav#nav-auth.mm-closed button.navbar-toggle,
+nav#nav-auth.mm-closed a.navbar-brand
+{
+    visibility:visible;
+    opacity:1;
+    transition-delay:0.20s;
 }
 /*a.navbar-brand nav#nav-auth nav.mm-opened {*/
     /*opacity:1;*/
@@ -73,7 +88,7 @@ html.mm-opened nav#nav-auth a.navbar-brand {
         margin-left: 60px;
     }
     nav#nav-logo a.navbar-brand {
-        margin-left: 10px;
+        margin-left: 60px;
     }
     .mm-menu {
         z-index: 0;

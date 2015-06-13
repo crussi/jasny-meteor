@@ -31,26 +31,35 @@ Template['menu'].rendered = function() {
     resizeSlideout();
 }
 
+Template['logo'].events({
+    "click .navbar-toggle": function () {
+        navbarToggle();
+    }
+});
+
 Template['header-auth'].events({
     "click .navbar-toggle": function () {
         navbarToggle();
     }
 });
 
-function menuResize() {
-    console.log('menuResize');
-}
 
-function navbarToggle () {
-    console.log('navbar-toggle');
+navbarToggle = function () {
     $("#menu").toggleClass("mm-current").toggleClass("mm-opened");
+    var navauth = $("#nav-auth");
+    if (navauth.hasClass("mm-opened")) {
+        navauth.removeClass("mm-opened").addClass("mm-closed");
+    } else {
+        navauth.removeClass("mm-closed").addClass("mm-opened");
+    }
     $("html").toggleClass("mm-widescreen").toggleClass("mm-opened").toggleClass("mm-opening");
 }
 
-function closeMenu () {
-    console.log('closeMenu');
+closeMenu = function () {
     if ($("#menu").hasClass("mm-current")) {
         $("#menu").removeClass("mm-current");
+        $("#nav-auth").removeClass("mm-opened");
+        $("#nav-auth").addClass("mm-closed");
         $("html").removeClass("mm-opened").removeClass("mm-opening");
     }
 }
