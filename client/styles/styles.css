@@ -36,6 +36,7 @@ nav#nav-auth.mm-closed a.navbar-brand
     opacity:1;
     transition-delay:0.20s;
 }
+
 /*a.navbar-brand nav#nav-auth nav.mm-opened {*/
     /*opacity:1;*/
     /*transition:opacity 0.35s linear;*/
@@ -56,11 +57,18 @@ nav#nav-auth.mm-closed a.navbar-brand
     margin-top: 15px;
 }
 
-.navbar.navbar, .navbar-default.navbar {
-    background-color: #4285f4;
+/*.navbar.navbar, .navbar-default.navbar {*/
+    /*background-color: #4285f4;*/
+    /*color: rgba(255, 255, 255, 0.84);*/
+/*}*/
+#nav-auth {
+    background-color: #2196F3;
     color: rgba(255, 255, 255, 0.84);
 }
-
+#nav-logo {
+    background-color: #1976D2;
+    color: rgba(255, 255, 255, 0.84);
+}
 .container {
     max-width: 100%;
     min-height: 100vh;
@@ -77,6 +85,9 @@ nav#nav-auth.mm-closed a.navbar-brand
     }
     .navbar-toggle {
         display: none;
+        visibility:hidden;
+        opacity:0;
+        transition:visibility 0s linear 0.15s,opacity 0.15s linear;
     }
     .navbar-brand {
         margin-left: 5px;
@@ -91,13 +102,14 @@ nav#nav-auth.mm-closed a.navbar-brand
     }
     .navbar-toggle {
         display: block;
+        visibility:visible;
+        opacity:1;
+        transition-delay:0.20s;
     }
-    nav#nav-auth a.navbar-brand {
-        margin-left: 60px;
+    a.navbar-brand {
+        margin-left: 55px;
     }
-    nav#nav-logo a.navbar-brand {
-        margin-left: 60px;
-    }
+
     .mm-menu {
         z-index: 0;
         overflow: visible;
