@@ -13,7 +13,7 @@
 </template>
 
 <template name="header-auth">
-    <nav id="nav-auth" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <nav id="nav-auth" class="navbar navbar-inverse navbar-default navbar-fixed-top {{getClass}}">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-target=".navmenu">
                 <span class="icon-bar"></span>
@@ -61,13 +61,16 @@
 
 <template name="menuitem">
 
-    <li><a href="#/"><i class="md {{icon}}"></i> {{text}}</a>
+    <li id="{{formatId _id}}" class="mm-item {{getClass text _id}}">
         {{#if this.subitems.length}}
+            <span><i class="mm-md md {{icon}}"></i>{{text}}</span>
             <ul>
                 {{#each this.subitems}}
                     {{> submenuitem}}
                 {{/each}}
             </ul>
+        {{else}}
+            <a href="#/"><i class="mm-md md {{icon}}"></i>{{text}}</a>
         {{/if}}
     </li>
 </template>

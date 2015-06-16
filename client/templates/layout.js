@@ -25,12 +25,12 @@
             $(window).resize(function(){
                 resizeSlideout();
             });
-            $(function() {
-                console.log('material design init');
-                console.log($.material.init);
-                $.material.init();
-                $.material.ripples();
-            });
+            //$(function() {
+            //    console.log('material design init');
+            //    console.log($.material.init);
+            //    $.material.init();
+            //    $.material.ripples();
+            //});
         });
     });
 

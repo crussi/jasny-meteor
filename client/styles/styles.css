@@ -137,7 +137,9 @@ nav#nav-auth.mm-closed a.navbar-brand
         padding-bottom: 20px;
     }
 }
-
+.mm-menu {
+    background-color: #ececec;
+}
 .mm-page {
     min-height: 100vh;
 }
@@ -188,6 +190,76 @@ nav#nav-auth.mm-closed a.navbar-brand
     }
 }
 
+/* menuitem colors and spacing*/
+.mm-listview a {
+    text-decoration: none;
+}
+.mm-listview li {
+    margin: 0px 10px;
+    color: #757575;
+    font-weight: 400;
+}
+/* mmenu arrows (make darker) */
+.mm-menu .mm-listview > li > a.mm-prev, .mm-menu .mm-listview > li > a.mm-next {
+    color: rgba(0, 0, 0, 0.4);
+}
+.mm-menu .mm-header .mm-btn:before, .mm-menu .mm-header .mm-btn:after {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+.mm-menu .mm-header > a {
+    color: rgba(0, 0, 0, 0.4);
+}
+/*remover arrow left border */
+.mm-listview .mm-next:before {
+    border-left-style: none;
+}
+.mm-md {
+    margin-left: 10px;
+    margin-right: 24px;
+    font-size: 22px;
+}
+
+.md-inbox,
+li.inbox.active {
+    color: #3c80f6;
+}
+#nav-auth.inbox {
+    background-color: #3c80f6;
+}
+.md-check-box,
+li.next.active {
+    color: #0d904f;
+}
+#nav-auth.next {
+    background-color: #0d904f;
+}
+.md-star,
+li.focus.active {
+    color: #F44336; /*Red 500*/
+}
+#nav-auth.focus {
+    background-color: #F44336; /*Red 500*/
+}
+.md-account-box,
+li.waitingfor.active {
+    color: #FF9800; /*Orange 500*/
+}
+#nav-auth.waitingfor {
+    background-color: #FF9800; /*Orange 500*/
+}
+.md-schedule,
+li.scheduled.active {
+    color: #009688; /*Teal 500*/
+}
+#nav-auth.scheduled {
+    background-color: #009688; /*Teal 500*/
+}
+li.active {
+    background-color: rgba(0,0,0,.05);
+}
+li:hover {
+    background-color: rgba(0,0,0,.035);
+}
 /* styles added to support signin/signup */
 
 
