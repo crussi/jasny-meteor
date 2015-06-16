@@ -5,6 +5,7 @@ html, body {
 }
 body {
     /*padding: 50px 0 0 0;*/
+
 }
 
 .navmenu {
@@ -13,9 +14,7 @@ body {
 
 .navbar {
     display: block;
-    /*text-align: center;*/
     height: 60px;
-    /*box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);*/
 }
 /* TODO: remember to put in vendor prefixes */
 /*html.mm-opened nav#nav-auth button.navbar-toggle,*/
@@ -72,6 +71,8 @@ nav#nav-auth.mm-closed a.navbar-brand
 .container {
     max-width: 100%;
     min-height: 100vh;
+    background-color: #ececec;
+    /*background-color: #C1C1C1;*/
 }
 .container.mktg {
     min-width: 100%;
@@ -91,6 +92,9 @@ nav#nav-auth.mm-closed a.navbar-brand
     }
     .navbar-brand {
         margin-left: 5px;
+    }
+    #nav-auth.navbar {
+        box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
     }
 }
 @media all and (max-width: 749px) {
@@ -168,7 +172,7 @@ nav#nav-auth.mm-closed a.navbar-brand
 }
 
 .mm-menu.mm-widescreen {
-    margin-top: 61px;
+    margin-top: 60px;
 }
 
 /* bootstrap overrides */
@@ -253,6 +257,42 @@ li.scheduled.active {
 }
 #nav-auth.scheduled {
     background-color: #009688; /*Teal 500*/
+}
+.md-pause,
+li.someday.active {
+    color: #9C27B0;  /*Purple 500*/
+}
+#nav-auth.someday {
+    background-color: #9C27B0;  /*Purple 500*/
+}
+.md-content-paste,
+li.projects.active {
+    color: #E91E63; /*Pink 500*/
+}
+#nav-auth.projects {
+    background-color: #E91E63; /*Pink 500*/
+}
+
+.md-local-cafe,
+li.review.active {
+    color: #795548; /* Brown 500*/
+}
+#nav-auth.review {
+    background-color: #795548; /* Brown 500*/
+}
+.md-list,
+li.lists.active {
+    color: #673AB7; /* Deep Purple 500 */
+}
+#nav-auth.lists {
+    background-color: #673AB7; /* Deep Purple 500 */
+}
+.md-place,
+li.contexts.active {
+    color: #00BCD4; /* Cyan 500 */
+}
+#nav-auth.contexts {
+    background-color: #00BCD4; /* Cyan 500 */
 }
 li.active {
     background-color: rgba(0,0,0,.05);
