@@ -36,7 +36,6 @@
 
 
 <template name="menu">
-
     <nav id="menu" class="before-move">
         {{>logo}}
         <ul>
@@ -49,7 +48,7 @@
 </template>
 
 <template name="logo">
-    <nav id="nav-logo" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <nav id="nav-logo" class="navbar navbar-inverse navbar-default navbar-fixed-top {{getClass}}">
         <button type="button" class="navbar-toggle" data-target=".navmenu">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -61,7 +60,7 @@
 
 <template name="menuitem">
 
-    <li id="{{formatId _id}}" class="mm-item {{getClass text _id}}">
+    <li id="{{formatId order}}" class="{{getClass text order}}">
         {{#if this.subitems.length}}
             <span><i class="mm-md md {{icon}}"></i>{{text}}</span>
             <ul>
@@ -76,5 +75,7 @@
 </template>
 
 <template name="submenuitem">
-    <li><a href="#/"><i class="md {{icon}}"></i> {{text}}</a></li>
+    <li id="{{order}}" class="{{getClass text order}}">
+        <a href="#/"><i class="md {{icon}}"></i> {{text}}</a>
+    </li>
 </template>

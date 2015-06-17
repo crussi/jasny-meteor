@@ -5,7 +5,22 @@ formatId = function (data) {
 formatMenuItemClass = function (text) {
     return text.replace(/ /g,'').toLowerCase();
 }
+prepNavbarClasses = function () {
+    var bsclasses = 'navbar navbar-inverse navbar-default navbar-fixed-top ';
+    var activeclass = Session.get("active-menuitem-class");
+    return bsclasses + activeclass ? activeclass : '';
+}
 
+prepMenuitemClasses = function (text,id) {
+    text = formatMenuItemClass(text);
+    var active = (id == Session.get("active-menuitem-id")) ? ' active' : '';
+    return "mm-item " + text + active;
+}
+prepMenusubitemClasses = function (text,id) {
+    text = formatMenuItemClass(text);
+    var active = (id == Session.get("active-submenuitem-id")) ? ' active' : '';
+    return "mm-subitem " + text + active;
+}
 //This helper strips off ObjectID from document id
 Template.registerHelper('formatId', function(data) {
     return formatId(data);
@@ -31,16 +46,24 @@ Template['menu'].helpers({
 });
 Template['menuitem'].helpers({
     getClass: function (text,id) {
-        text = formatMenuItemClass(text);
-        var active = (formatId(id) === Session.get("active-menuitem-id")) ? ' active' : '';
-        return text + active;
+        return prepMenuitemClasses(text,id);
+    }
+});
+Template['submenuitem'].helpers({
+    getClass: function (text,id) {
+        return prepMenusubitemClasses(text,id);
     }
 });
 Template['menuitem'].events({
     "click li.mm-item": function (event, template) {
-        console.log("li clicked id: " + event.currentTarget.id);
         Session.set("active-menuitem-id",event.currentTarget.id);
         Session.set("active-menuitem-class",formatMenuItemClass(event.currentTarget.outerText));
+        Session.set("active-submenuitem-id",null);
+    }
+});
+Template['submenuitem'].events({
+    "click li.mm-subitem": function (event, template) {
+        Session.set("active-submenuitem-id",event.currentTarget.id);
     }
 });
 
@@ -68,8 +91,12 @@ Template['header-auth'].events({
 });
 Template['header-auth'].helpers({
     getClass: function () {
-        var activeclass = Session.get("active-menuitem-class");
-        return activeclass ? activeclass : '';
+        return prepNavbarClasses();
+    }
+});
+Template['logo'].helpers({
+    getClass: function () {
+        return prepNavbarClasses();
     }
 });
 
