@@ -16,6 +16,16 @@ prepMenusubitemClasses = function (color,id) {
     return "mm-subitem " + active;
 }
 
+Template['layout-menu'].helpers({
+    isReady: function(sub){
+        if(sub){
+            return FlowRouter.subsReady(sub);
+        } else {
+            return FlowRouter.subsReady();
+        }
+    }
+});
+
 Template['menu'].helpers({
     menuitems: function () {
         console.log("returning menuitems");

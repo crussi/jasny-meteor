@@ -1,3 +1,11 @@
+<template name="layout-menu">
+    {{#if isReady "menuItems"}}
+        {{>menu}}
+    {{else}}
+        Loading ...
+    {{/if}}
+</template>
+
 <template name="menu">
     <nav id="menu" class="before-move">
         {{>logo}}

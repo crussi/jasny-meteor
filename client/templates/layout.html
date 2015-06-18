@@ -9,11 +9,7 @@
 <template name="layout-auth">
     {{> Template.dynamic template=header}}
     {{> Template.dynamic template=content}}
-    {{#if isReady "menuItems"}}
-        {{>menu}}
-    {{else}}
-        Loading ...
-    {{/if}}
+    {{> Template.dynamic template=menu}}
 </template>
 
 
