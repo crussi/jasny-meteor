@@ -1,29 +1,39 @@
 [
 	{
+		"key" : "0nCp9fPv5kqKLqE7RO6E9Q",
 		"icon": "md-inbox",
+		"color" : "blue",
 		"text": "Inbox",
 		"order": 1.0,
 		"subitems": []
 	},
 	{
+		"key" : "O5T2A74BCk6pzxdbtMmZ6Q",
 		"icon": "md-check-box",
+		"color" : "green",
 		"text": "Next",
 		"order": 2.0,
 		"subitems": [
 			{
+				"key" : "vss07n7_Pk_qfjTsB4yalQ",
 				"icon": "md-today",
+				"color" : "green",
 				"text": "Today",
 				"order": 2.1,
 				"subitems": []				
 			},
 			{
+				"key" : "AUzMFwtJ_0Kv-v_KCx59tg",
 				"icon": "md-event-note",
+				"color" : "green",
 				"text": "This Week",
 				"order": 2.2,
 				"subitems": []				
 			},
 			{
+				"key" : "cwTNXC_ZBke22gWfz9_2sQ",
 				"icon": "md-event-available",
+				"color" : "green",
 				"text": "Soon",
 				"order": 2.3,
 				"subitems": []				
@@ -31,30 +41,40 @@
 		]
 	},
 	{
+		"key" : "5Rq-WhLDeEqsJzXJmH8NJg",
 		"icon": "md-star",
+		"color" : "red",
 		"text": "Focus",
 		"order": 3.0,
 		"subitems": []
 	},
 	{
+		"key" : "U9doy5KyzEKLvrNAmAPl_Q",
 		"icon": "md-account-box",
+		"color" : "orange",
 		"text": "Waiting for",
 		"order": 4.0,
 		"subitems": []
 	},
 	{
+		"key" : "8L-xNZxCYkudclGimYxs1w",
 		"icon": "md-schedule",
+		"color" : "cyan",
 		"text": "Scheduled",
 		"order": 5.0,
 		"subitems": [
 			{
+				"key" : "8A4nUpY3DEqMX6JvuoBMnw",
 				"icon": "md-today",
+				"color" : "cyan",
 				"text": "Calendar",
 				"order": 5.1,
 				"subitems": []				
 			},
 			{
+				"key" : "gIegCkCGVEm_zvwLN-9RBQ",
 				"icon": "md-notifications",
+				"color" : "cyan",
 				"text": "Reminders",
 				"order": 5.2,
 				"subitems": []				
@@ -62,30 +82,40 @@
 		]
 	},
 	{
+		"key" : "8YxCCVb24kK-zUCr-rT44Q",
 		"icon": "md-pause",
+		"color" : "purple",
 		"text": "Someday",
 		"order": 6.0,
 		"subitems": []
 	},	
 	{
+		"key" : "YZO1mzB7EkSlpY-R4ascNg",
 		"icon": "md-content-paste",
+		"color" : "pink",
 		"text": "Projects",
 		"order": 7.0,
 		"subitems": [
 			{
+				"key" : "rCDOWbA8S0G2K7PcWZ78bg",
 				"icon": "md-assignment",
+				"color" : "pink",
 				"text": "Project 1",
 				"order": 7.1,
 				"subitems": []				
 			},
 			{
+				"key" : "g9jGRI612ESBPUnjNwld7A",
 				"icon": "md-assignment",
+				"color" : "pink",
 				"text": "Project 2",
 				"order": 7.2,
 				"subitems": []				
 			},
 			{
+				"key" : "Wmc1O0gjjEi1-AgJFvcI8w",
 				"icon": "md-assignment",
+				"color" : "pink",
 				"text": "Project 3",
 				"order": 7.3,
 				"subitems": []				
@@ -93,36 +123,48 @@
 		]
 	},
 	{
+		"key" : "vaHpKO7b10iLzS4qWu21lA",
 		"icon": "md-local-cafe",
+		"color" : "brown",
 		"text": "Review",
 		"order": 8.0,
 		"subitems": []
 	},
 	{
+		"key" : "bN2CR3r9_0iEN5W2fPufcw",
 		"icon": "md-list",
+		"color" : "deep-purple",
 		"text": "Lists",
 		"order": 9.0,
 		"subitems": [
 			{
+				"key" : "_Cv7vpHf8Ui7Hijl3zk32Q",
 				"icon": "md-list",
+				"color" : "deep-purple",
 				"text": "Checklists",
 				"order": 9.1,
 				"subitems": []				
 			},
 			{
+				"key" : "h8E9ZRNlLUWX3LDSPrhcZA",
 				"icon": "md-book",
+				"color" : "deep-purple",
 				"text": "Reference",
 				"order": 9.2,
 				"subitems": []				
 			},
 			{
+				"key" : "j8mXBFrNxE2k5B9dHyNDNQ",
 				"icon": "md-archive",
+				"color" : "deep-purple",
 				"text": "Done",
 				"order": 9.3,
 				"subitems": []				
 			},
 			{
+				"key" : "Z5hyGkNCLkWKgbZONxF0Jw",
 				"icon": "md-delete",
+				"color" : "deep-purple",
 				"text": "Trash",
 				"order": 9.4,
 				"subitems": []				
@@ -130,38 +172,50 @@
 		]
 	},	
 	{
+		"key" : "tu5LZyQbCUWJBblHAiPE4A",
 		"icon": "md-place",
+		"color" : "teal",
 		"text": "Contexts",
 		"order": 10.0,
 		"subitems": [
 			{
+				"key" : "PyIsSaL0R0Sw0aMjeWgxiA",
 				"icon": "md-local-offer",
+				"color" : "teal",
 				"text": "Roles",
 				"order": 10.1,
 				"subitems": []				
 			},
 			{
+				"key" : "Ms2qsW8ZKUWak3oYYs2Wyw",
 				"icon": "md-place",
+				"color" : "teal",
 				"text": "Contexts",
 				"order": 10.2,
 				"subitems": []				
 			},
 			{
+				"key" : "7HSzd3M5H0add3Fb5fcArQ",
 				"icon": "md-flag",
+				"color" : "teal",
 				"text": "Flags",
 				"order": 10.3,
 				"subitems": []				
 			},
 			{
+				"key" : "aIVMd5si3kyT-LJdsot7Dw",
 				"icon": "md-account-box",
+				"color" : "teal",
 				"text": "Delegates",
 				"order": 10.4,
 				"subitems": []				
 			}									
 		]
-	},		
+	},	
 	{
+		"key" : "xgGK1zVuFkSglWGP85XSpA",
 		"icon": "md-settings",
+		"color" : "indigo",
 		"text": "Settings",
 		"order": 11.0,
 		"subitems": []

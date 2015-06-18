@@ -215,89 +215,12 @@ nav#nav-auth.mm-closed a.navbar-brand
     margin-right: 24px;
     font-size: 22px;
 }
-
-li.mm-item .md-inbox,
-li.inbox.active {
-    color: #2196F3;
-}
-.md-check-box,
-li.next.active,
-li.mm-subitem.today .md-today,
-li.today.active,
-li.mm-subitem .md-event-note,
-li.thisweek.active,
-.md-event-available,
-li.soon.active  {
-    color: #4CAF50; /*Green 500*/
-}
-li.mm-item .md-star,
-li.focus.active {
-    color: #F44336; /*Red 500*/
-}
-li.mm-item .md-account-box,
-li.waitingfor.active {
-    color: #FF9800; /*Orange 500*/
-}
-li.mm-item .md-schedule,
-li.mm-subitem.calendar .md-today,
-li.mm-subitem.calendar.active,
-li.mm-subitem.reminders .md-notifications,
-li.mm-subitem.reminders.active,
-li.scheduled.active {
-    color: #00BCD4; /* Cyan 500 */
-}
-li.mm-item .md-pause,
-li.someday.active {
-    color: #9C27B0;  /*Purple 500*/
-}
-li.mm-item .md-content-paste,
-li.projects.active,
-li.mm-subitem .md-assignment {
-    color: #E91E63; /*Pink 500*/
-}
-li.mm-item .md-local-cafe,
-li.review.active {
-    color: #795548; /* Brown 500*/
-}
-li.mm-item .md-list,
-li.lists.active,
-li.mm-subitem .md-list,
-li.mm-subitem .md-book,
-li.mm-subitem .md-archive,
-li.mm-subitem .md-delete,
-li.mm-subitem.checklists.active,
-li.mm-subitem.reference.active,
-li.mm-subitem.done.active,
-li.mm-subitem.trash.active {
-    color: #673AB7; /* Deep Purple 500 */
-}
-li.mm-item .md-place,
-li.contexts.active,
-li.mm-subitem .md-local-offer,
-li.mm-subitem .md-place,
-li.mm-subitem .md-flag,
-li.mm-subitem .md-account-box,
-li.mm-subitem.roles.active,
-li.mm-subitem.contexts.active,
-li.mm-subitem.flags.active,
-li.mm-subitem.delegates.active
-{
-    color: #009688; /*Teal 500*/
-}
-
-li.mm-item .md-settings,
-li.mm-item.settings.active {
-    color: #3F51B5; /*Indigo 500*/
-}
-
-
 li.mm-item li.active {
     background-color: rgba(0,0,0,.05);
 }
 li:hover {
     background-color: rgba(0,0,0,.035);
 }
-/* header navbar colors */
 #nav-auth {
     background-color: #2196F3;
     color: rgba(255, 255, 255, 0.84);
@@ -306,72 +229,140 @@ li:hover {
     background-color: #1976D2;
     color: rgba(255, 255, 255, 0.84);
 }
-#nav-auth.inbox {
-    background-color: #2196F3; /*Blue 500*/
+.blue-500-bg {
+    background-color: #2196F3 !important; /*Blue 500*/
 }
-#nav-logo.inbox {
-    background-color: #1976D2; /*Blue 700*/
+.blue-700-bg {
+    background-color: #1976D2 !important; /*Blue 700*/
 }
-#nav-auth.next {
-    background-color: #4CAF50; /*Green 500*/
+.green-500-bg {
+    background-color: #4CAF50 !important; /*Green 500*/
 }
-#nav-logo.next {
-    background-color: #388E3C; /*Green 700*/
+.green-700-bg {
+    background-color: #388E3C !important; /*Green 700*/
 }
-#nav-auth.focus {
-    background-color: #F44336; /*Red 500*/
+.red-500-bg {
+    background-color: #F44336 !important; /*Red 500*/
 }
-#nav-logo.focus {
-    background-color: #D32F2F; /*Red 700*/
+.red-700-bg {
+    background-color: #D32F2F !important; /*Red 700*/
 }
-#nav-auth.waitingfor {
-     background-color: #FF9800; /*Orange 500*/
+.orange-500-bg {
+    background-color: #FF9800 !important; /*Orange 500*/
 }
-#nav-logo.waitingfor {
-    background-color: #F57C00; /*Orange 700*/
+.orange-700-bg {
+    background-color: #F57C00 !important; /*Orange 700*/
 }
-#nav-auth.scheduled {
-    background-color: #00BCD4; /* Cyan 500 */
+.cyan-500-bg {
+    background-color: #00BCD4 !important; /* Cyan 500 */
 }
-#nav-logo.scheduled {
-    background-color: #0097A7; /* Cyan 700 */
+.cyan-700-bg {
+    background-color: #0097A7 !important; /* Cyan 700 */
 }
-#nav-auth.someday {
-    background-color: #9C27B0;  /*Purple 500*/
+.purple-500-bg {
+    background-color: #9C27B0 !important;  /*Purple 500*/
 }
-#nav-logo.someday {
-    background-color: #7B1FA2;  /*Purple 700*/
+.purple-700-bg {
+    background-color: #7B1FA2 !important;  /*Purple 700*/
 }
-#nav-auth.projects {
-    background-color: #E91E63; /*Pink 500*/
+.pink-500-bg {
+    background-color: #E91E63 !important; /*Pink 500*/
 }
-#nav-logo.projects {
-    background-color: #C2185B; /*Pink 700*/
+.pink-700-bg {
+    background-color: #C2185B !important; /*Pink 700*/
 }
-#nav-auth.review {
-    background-color: #795548; /* Brown 500*/
+.brown-500-bg {
+    background-color: #795548 !important; /* Brown 500*/
 }
-#nav-logo.review {
-    background-color: #5D4037; /* Brown 700*/
+.brown-700-bg {
+    background-color: #5D4037 !important; /* Brown 700*/
 }
-#nav-auth.lists {
-    background-color: #673AB7; /* Deep Purple 500 */
+.deep-purple-500-bg {
+    background-color: #673AB7 !important; /* Deep Purple 500 */
 }
-#nav-logo.lists {
-    background-color: #512DA8; /* Deep Purple 700 */
+.deep-purple-700-bg {
+    background-color: #512DA8 !important; /* Deep Purple 700 */
 }
-#nav-auth.contexts {
-    background-color: #009688; /*Teal 500*/
+.teal-500-bg {
+    background-color: #009688 !important; /*Teal 500*/
 }
-#nav-logo.contexts {
-    background-color: #00796B; /*Teal 700*/
+.teal-700-bg {
+    background-color: #00796B !important; /*Teal 700*/
 }
-#nav-auth.settings {
-    background-color: #3F51B5; /*Indigo 500*/
+.indigo-500-bg {
+    background-color: #3F51B5 !important; /*Indigo 500*/
 }
-#nav-logo.settings {
-    background-color: #303F9F; /*Indigo 700*/
+.indigo-700-bg {
+    background-color: #303F9F !important; /*Indigo 700*/
 }
+.blue-500 {
+    color: #2196F3 !important; /*Blue 500*/
+}
+.blue-700 {
+    color: #1976D2 !important; /*Blue 700*/
+}
+.green-500 {
+    color: #4CAF50 !important; /*Green 500*/
+}
+.green-700 {
+    color: #388E3C !important; /*Green 700*/
+}
+.red-500 {
+    color: #F44336 !important; /*Red 500*/
+}
+.red-700 {
+    color: #D32F2F !important; /*Red 700*/
+}
+.orange-500 {
+    color: #FF9800 !important; /*Orange 500*/
+}
+.orange-700 {
+    color: #F57C00 !important; /*Orange 700*/
+}
+.cyan-500 {
+    color: #00BCD4 !important; /* Cyan 500 */
+}
+.cyan-700 {
+    color: #0097A7 !important; /* Cyan 700 */
+}
+.purple-500 {
+    color: #9C27B0 !important;  /*Purple 500*/
+}
+.purple-700 {
+    color: #7B1FA2 !important;  /*Purple 700*/
+}
+.pink-500 {
+    color: #E91E63 !important; /*Pink 500*/
+}
+.pink-700 {
+    color: #C2185B !important; /*Pink 700*/
+}
+.brown-500 {
+    color: #795548 !important; /* Brown 500*/
+}
+.brown-700 {
+    color: #5D4037 !important; /* Brown 700*/
+}
+.deep-purple-500 {
+    color: #673AB7 !important; /* Deep Purple 500 */
+}
+.deep-purple-700 {
+    color: #512DA8 !important; /* Deep Purple 700 */
+}
+.teal-500 {
+    color: #009688 !important; /*Teal 500*/
+}
+.teal-700 {
+    color: #00796B !important; /*Teal 700*/
+}
+.indigo-500 {
+    color: #3F51B5 !important; /*Indigo 500*/
+}
+.indigo-700 {
+    color: #303F9F !important; /*Indigo 700*/
+}
+
+
 
 /* styles added to support signin/signup */
 

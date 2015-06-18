@@ -2,24 +2,20 @@
 formatId = function (data) {
     return (data && data._str) || data;
 }
-formatMenuItemClass = function (text) {
-    return text.replace(/ /g,'').toLowerCase();
-}
+
 prepNavbarClasses = function () {
     var bsclasses = 'navbar navbar-inverse navbar-default navbar-fixed-top ';
     var activeclass = Session.get("active-menuitem-class");
-    return bsclasses + activeclass ? activeclass : '';
+    return bsclasses + activeclass ? activeclass + '-500-bg' : '';
 }
 
-prepMenuitemClasses = function (text,id) {
-    text = formatMenuItemClass(text);
-    var active = (id == Session.get("active-menuitem-id")) ? ' active' : '';
-    return "mm-item " + text + active;
+prepMenuitemClasses = function (color,id) {
+    var active = (id == Session.get("active-menuitem-id")) ? color + '-500 ' : '';
+    return "mm-item " + active;
 }
-prepMenusubitemClasses = function (text,id) {
-    text = formatMenuItemClass(text);
-    var active = (id == Session.get("active-submenuitem-id")) ? ' active' : '';
-    return "mm-subitem " + text + active;
+prepMenusubitemClasses = function (color,id) {
+    var active = (id == Session.get("active-submenuitem-id")) ? color + '-500 ' : '';
+    return "mm-subitem " + active;
 }
 //This helper strips off ObjectID from document id
 Template.registerHelper('formatId', function(data) {
@@ -45,19 +41,19 @@ Template['menu'].helpers({
     }
 });
 Template['menuitem'].helpers({
-    getClass: function (text,id) {
-        return prepMenuitemClasses(text,id);
+    getClass: function (color,id) {
+        return prepMenuitemClasses(color,id);
     }
 });
 Template['submenuitem'].helpers({
-    getClass: function (text,id) {
-        return prepMenusubitemClasses(text,id);
+    getClass: function (color,id) {
+        return prepMenusubitemClasses(color,id);
     }
 });
 Template['menuitem'].events({
     "click li.mm-item": function (event, template) {
         Session.set("active-menuitem-id",event.currentTarget.id);
-        Session.set("active-menuitem-class",formatMenuItemClass(event.currentTarget.outerText));
+        Session.set("active-menuitem-class",$(event.currentTarget).data().color);
         Session.set("active-submenuitem-id",null);
     }
 });
