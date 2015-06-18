@@ -1,81 +1,10 @@
-<template name="header-unauth">
-    <nav id="navx" class="navbar navbar-default navbar-fixed-top">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Toduo</a>
-        </div>
-        <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li><a id="signin" href="#">SIGN IN</a></li>
-                    <li><button class="btn btn-material-blue-400">Sign up</button></li>
-                </ul>
-        </div>
-    </nav>
-</template>
-
-<template name="header-auth">
-    <nav id="nav-auth" class="navbar navbar-inverse navbar-default navbar-fixed-top {{getClass}}">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-target=".navmenu">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Toduo</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-right">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a class="has-image" href="#"><img class="profile-img-sml" src="/images/profilepic32.jpg"></a></li>
-            </ul>
-        </div>
-    </nav>
-</template>
 
 
 
-<template name="menu">
-    <nav id="menu" class="before-move">
-        {{>logo}}
-        <ul>
-            {{#each menuitems}}
-                {{> menuitem}}
-            {{/each}}
-        </ul>
-    </nav>
 
-</template>
 
-<template name="logo">
-    <nav id="nav-logo" class="navbar navbar-inverse navbar-default navbar-fixed-top {{getClass}}">
-        <button type="button" class="navbar-toggle" data-target=".navmenu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Toduo</a>
-    </nav>
-</template>
 
-<template name="menuitem">
 
-    <li id="{{key}}" data-color="{{color}}" data-route="{{route}}" class="{{getClass color key}}">
-        {{#if this.subitems.length}}
-            <span><i class="mm-md md {{icon}} {{color}}-500"></i>{{text}}</span>
-            <ul>
-                {{#each this.subitems}}
-                    {{> submenuitem}}
-                {{/each}}
-            </ul>
-        {{else}}
-            <a href="#/"><i class="mm-md md {{icon}} {{color}}-500"></i>{{text}}</a>
-        {{/if}}
-    </li>
-</template>
 
-<template name="submenuitem">
-    <li id="{{key}}" data-color="{{color}}" data-route="{{route}}" class="{{getClass color key}}">
-        <a href="#/"><i class="md {{icon}} {{color}}-500"></i> {{text}}</a>
-    </li>
-</template>
+
+
