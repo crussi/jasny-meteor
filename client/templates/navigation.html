@@ -60,7 +60,7 @@
 
 <template name="menuitem">
 
-    <li id="{{key}}" data-color="{{color}}" class="{{getClass color key}}">
+    <li id="{{key}}" data-color="{{color}}" data-route="{{route}}" class="{{getClass color key}}">
         {{#if this.subitems.length}}
             <span><i class="mm-md md {{icon}} {{color}}-500"></i>{{text}}</span>
             <ul>
@@ -75,7 +75,7 @@
 </template>
 
 <template name="submenuitem">
-    <li id="{{key}}" data-color="{{color}}" class="{{getClass color key}}">
+    <li id="{{key}}" data-color="{{color}}" data-route="{{route}}" class="{{getClass color key}}">
         <a href="#/"><i class="md {{icon}} {{color}}-500"></i> {{text}}</a>
     </li>
 </template>

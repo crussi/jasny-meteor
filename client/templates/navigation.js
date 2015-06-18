@@ -55,11 +55,13 @@ Template['menuitem'].events({
         Session.set("active-menuitem-id",event.currentTarget.id);
         Session.set("active-menuitem-class",$(event.currentTarget).data().color);
         Session.set("active-submenuitem-id",null);
+        FlowRouter.go($(event.currentTarget).data().route);
     }
 });
 Template['submenuitem'].events({
     "click li.mm-subitem": function (event, template) {
         Session.set("active-submenuitem-id",event.currentTarget.id);
+        FlowRouter.go($(event.currentTarget).data().route);
     }
 });
 

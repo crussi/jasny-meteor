@@ -59,3 +59,23 @@ FlowRouter.route('/help-signin',{
         FlowLayout.render('layout-auth', { header: "header-auth", content: "app"});
     }
 });
+
+FlowRouter.route('/focus',{
+    subscriptions: function(params) {
+        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+    },
+    action: function() {
+        console.log('/focus route');
+        FlowLayout.render('layout-auth', { content: "focus"});
+    }
+});
+
+FlowRouter.route('/waitingfor',{
+    subscriptions: function(params) {
+        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+    },
+    action: function() {
+        console.log('/waitingfor route');
+        FlowLayout.render('layout-auth', { content: "waitingfor"});
+    }
+});

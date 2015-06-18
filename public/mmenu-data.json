@@ -4,6 +4,7 @@
 		"icon": "md-inbox",
 		"color" : "blue",
 		"text": "Inbox",
+	  	"route": "/inbox",
 		"order": 1.0,
 		"subitems": []
 	},
@@ -12,6 +13,7 @@
 		"icon": "md-check-box",
 		"color" : "green",
 		"text": "Next",
+	    "route": "/next",
 		"order": 2.0,
 		"subitems": [
 			{
@@ -19,6 +21,7 @@
 				"icon": "md-today",
 				"color" : "green",
 				"text": "Today",
+			    "route": "/next/today",
 				"order": 2.1,
 				"subitems": []				
 			},
@@ -27,6 +30,7 @@
 				"icon": "md-event-note",
 				"color" : "green",
 				"text": "This Week",
+  			    "route": "/next/thisweek",
 				"order": 2.2,
 				"subitems": []				
 			},
@@ -35,6 +39,7 @@
 				"icon": "md-event-available",
 				"color" : "green",
 				"text": "Soon",
+			  	"route": "/next/soon",
 				"order": 2.3,
 				"subitems": []				
 			}			
@@ -45,6 +50,7 @@
 		"icon": "md-star",
 		"color" : "red",
 		"text": "Focus",
+	    "route": "/focus",
 		"order": 3.0,
 		"subitems": []
 	},
@@ -53,6 +59,7 @@
 		"icon": "md-account-box",
 		"color" : "orange",
 		"text": "Waiting for",
+	  	"route": "/waitingfor",
 		"order": 4.0,
 		"subitems": []
 	},
@@ -61,6 +68,7 @@
 		"icon": "md-schedule",
 		"color" : "cyan",
 		"text": "Scheduled",
+	    "route": "/scheduled",
 		"order": 5.0,
 		"subitems": [
 			{
@@ -68,6 +76,7 @@
 				"icon": "md-today",
 				"color" : "cyan",
 				"text": "Calendar",
+			    "route": "/scheduled/calendar",
 				"order": 5.1,
 				"subitems": []				
 			},
@@ -76,6 +85,7 @@
 				"icon": "md-notifications",
 				"color" : "cyan",
 				"text": "Reminders",
+			    "route": "/scheduled/reminders",
 				"order": 5.2,
 				"subitems": []				
 			}		
@@ -86,6 +96,7 @@
 		"icon": "md-pause",
 		"color" : "purple",
 		"text": "Someday",
+	    "route": "/someday",
 		"order": 6.0,
 		"subitems": []
 	},	
@@ -94,6 +105,7 @@
 		"icon": "md-content-paste",
 		"color" : "pink",
 		"text": "Projects",
+  	    "route": "/projects",
 		"order": 7.0,
 		"subitems": [
 			{
@@ -101,6 +113,7 @@
 				"icon": "md-assignment",
 				"color" : "pink",
 				"text": "Project 1",
+			    "route": "/projects/1",
 				"order": 7.1,
 				"subitems": []				
 			},
@@ -109,6 +122,7 @@
 				"icon": "md-assignment",
 				"color" : "pink",
 				"text": "Project 2",
+ 			    "route": "/projects/2",
 				"order": 7.2,
 				"subitems": []				
 			},
@@ -117,6 +131,7 @@
 				"icon": "md-assignment",
 				"color" : "pink",
 				"text": "Project 3",
+			    "route": "/projects/3",
 				"order": 7.3,
 				"subitems": []				
 			}					
@@ -127,6 +142,7 @@
 		"icon": "md-local-cafe",
 		"color" : "brown",
 		"text": "Review",
+	    "route": "/review",
 		"order": 8.0,
 		"subitems": []
 	},
@@ -135,6 +151,7 @@
 		"icon": "md-list",
 		"color" : "deep-purple",
 		"text": "Lists",
+	    "route": "/lists",
 		"order": 9.0,
 		"subitems": [
 			{
@@ -142,6 +159,7 @@
 				"icon": "md-list",
 				"color" : "deep-purple",
 				"text": "Checklists",
+			    "route": "/lists/checklists",
 				"order": 9.1,
 				"subitems": []				
 			},
@@ -150,6 +168,7 @@
 				"icon": "md-book",
 				"color" : "deep-purple",
 				"text": "Reference",
+			    "route": "/lists/reference",
 				"order": 9.2,
 				"subitems": []				
 			},
@@ -158,6 +177,7 @@
 				"icon": "md-archive",
 				"color" : "deep-purple",
 				"text": "Done",
+			    "route": "/lists/done",
 				"order": 9.3,
 				"subitems": []				
 			},
@@ -166,6 +186,7 @@
 				"icon": "md-delete",
 				"color" : "deep-purple",
 				"text": "Trash",
+			    "route": "/lists/done",
 				"order": 9.4,
 				"subitems": []				
 			}									
@@ -176,6 +197,7 @@
 		"icon": "md-place",
 		"color" : "teal",
 		"text": "Contexts",
+	    "route": "/contexts",
 		"order": 10.0,
 		"subitems": [
 			{
@@ -183,6 +205,7 @@
 				"icon": "md-local-offer",
 				"color" : "teal",
 				"text": "Roles",
+			    "route": "/contexts/roles",
 				"order": 10.1,
 				"subitems": []				
 			},
@@ -191,6 +214,7 @@
 				"icon": "md-place",
 				"color" : "teal",
 				"text": "Contexts",
+			    "route": "/contexts/contexts",
 				"order": 10.2,
 				"subitems": []				
 			},
@@ -199,6 +223,7 @@
 				"icon": "md-flag",
 				"color" : "teal",
 				"text": "Flags",
+			    "route": "/contexts/flags",
 				"order": 10.3,
 				"subitems": []				
 			},
@@ -207,6 +232,7 @@
 				"icon": "md-account-box",
 				"color" : "teal",
 				"text": "Delegates",
+			    "route": "/contexts/delegates",
 				"order": 10.4,
 				"subitems": []				
 			}									
@@ -217,6 +243,7 @@
 		"icon": "md-settings",
 		"color" : "indigo",
 		"text": "Settings",
+	    "route": "/settings",
 		"order": 11.0,
 		"subitems": []
 	}	
