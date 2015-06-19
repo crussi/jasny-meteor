@@ -58,7 +58,7 @@ Template['signinform'].helpers({
                     console.log("login with password success");
                     callbacks.success(); // Display success message.
                     callbacks.reset();
-                    FlowRouter.go('/app');
+                    FlowRouter.go('/dashboard');
                 }
 
             });
@@ -157,7 +157,7 @@ Template['authFormBlock'].events({
             } else {
                 console.log('google login success');
                 //FlowLayout.render('layout-auth', { content: "app" });
-                FlowRouter.go('/app');
+                FlowRouter.go('/dashboard');
             }
         });
 
@@ -173,7 +173,7 @@ Template['authFormBlock'].events({
             } else {
                 console.log('facebook login success');
                 //FlowLayout.render('layout-auth', { content: "app" });
-                FlowRouter.go('/app');
+                FlowRouter.go('/dashboard');
             }
         });
 
@@ -186,7 +186,7 @@ Template['authFormBlock'].events({
             if (error) {
                 return console.log(error.reason);
             } else {
-                FlowRouter.go('/app');
+                FlowRouter.go('/dashboard');
             }
         });
     }

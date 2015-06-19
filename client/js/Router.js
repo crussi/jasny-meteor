@@ -7,7 +7,7 @@ FlowRouter.route('/',{
     action: function() {
         console.log('route / ... flow action');
         if (Meteor.user()) {
-            FlowLayout.render('layout-auth', { header: "header-auth", content: "app"});
+            FlowLayout.render('layout-auth', { content: "dashboard"});
         } else {
             FlowLayout.render('layout-unauth', { header: "header-unauth", content: "content-mktg"});
         }
@@ -44,32 +44,25 @@ var approutes = FlowRouter.group({
     }
 });
 
-approutes.route('/app',{
-    //subscriptions: function(params) {
-    //    console.log('flow sub');
-    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    //},
+approutes.route('/dashboard',{
     action: function() {
-        console.log('/app route');
-        FlowLayout.render('layout-auth', { header: "header-auth", content: "app", menu: "layout-menu"});
+        console.log('/dashboard route');
+        FlowLayout.render('layout-auth', { content: "dashboard"});
     }
 });
 
-FlowRouter.route('/help-signin',{
-    subscriptions: function(params) {
-        console.log('flow sub');
-
-    },
-    action: function() {
-        console.log('/signup route');
-        FlowLayout.render('layout-auth', { header: "header-auth", content: "app"});
-    }
-});
+//FlowRouter.route('/help-signin',{
+//    subscriptions: function(params) {
+//        console.log('flow sub');
+//
+//    },
+//    action: function() {
+//        console.log('/signup route');
+//        FlowLayout.render('layout-auth', { header: "header-unauth", content: "app"});
+//    }
+//});
 
 approutes.route('/inbox',{
-    //subscriptions: function(params) {
-    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    //},
     action: function() {
         console.log('/inbox route');
         FlowLayout.render('layout-auth', { content: "inbox"});
@@ -88,9 +81,6 @@ next.route('/today',{
 });
 
 next.route('/thisweek',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
     action: function() {
         console.log('/next/today route');
         FlowLayout.render('layout-auth', { content: "thisweek"});
@@ -144,9 +134,8 @@ approutes.route('/someday',{
     }
 });
 
-
 approutes.route('/projects/:id',{
-    action: function() {
+    action: function(params) {
         console.log('/projects/1 route id: ' + params.id);
         FlowLayout.render('layout-auth', { content: "project"});
     }
@@ -159,16 +148,11 @@ approutes.route('/review',{
     }
 });
 
-
-
 var lists = approutes.group({
     prefix: '/lists'
-    //subscriptions: function(params) {
-    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    //}
 });
 
-lists.route('/checklists',{
+lists.route('/:checklists',{
     action: function() {
         console.log('/lists/checklists route');
         FlowLayout.render('layout-auth', { content: "lists"});
@@ -191,9 +175,6 @@ lists.route('/done',{
 
 var contexts = approutes.group({
     prefix: '/contexts',
-    //subscriptions: function(params) {
-    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    //}
 });
 
 contexts.route('/roles',{
@@ -204,9 +185,6 @@ contexts.route('/roles',{
 });
 
 contexts.route('/roles',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
     action: function() {
         console.log('/roles route');
         FlowLayout.render('layout-auth', { content: "roles"});
@@ -234,10 +212,7 @@ contexts.route('/delegates',{
     }
 });
 
-FlowRouter.route('/settings',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+approutes.route('/settings',{
     action: function() {
         console.log('/settings route');
         FlowLayout.render('layout-auth', { content: "settings"});

@@ -15,8 +15,13 @@ prepMenusubitemClasses = function (color,id) {
     var active = (id == Session.get("active-submenuitem-id")) ? color + '-500 ' : '';
     return "mm-subitem " + active;
 }
+setActiveMenuitem = function (id) {
+    //Session.set("active-menuitem-id",event.currentTarget.id);
+    //Session.set("active-menuitem-class",$(event.currentTarget).data().color);
 
-Template['layout-menu'].helpers({
+}
+
+Template['layoutmenu'].helpers({
     isReady: function(sub){
         if(sub){
             return FlowRouter.subsReady(sub);
@@ -44,9 +49,10 @@ Template['submenuitem'].helpers({
 });
 Template['menuitem'].events({
     "click li.mm-item": function (event, template) {
-        Session.set("active-menuitem-id",event.currentTarget.id);
-        Session.set("active-menuitem-class",$(event.currentTarget).data().color);
-        Session.set("active-submenuitem-id",null);
+        //Session.set("active-menuitem-id",event.currentTarget.id);
+        //Session.set("active-menuitem-class",$(event.currentTarget).data().color);
+        setActiveMenuitem(event.currentTarget.id);
+        //Session.set("active-submenuitem-id",null);
         console.log("menuitem clicked: " + $(event.currentTarget).data().route);
         var route = $(event.currentTarget).data().route;
         if (route.trim().length > 0) {

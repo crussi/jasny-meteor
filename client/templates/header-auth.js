@@ -21,12 +21,12 @@ Template['logo'].events({
     }
 });
 
-Template['header-auth'].events({
+Template['headerauth'].events({
     "click .navbar-toggle": function () {
         navbarToggle();
     }
 });
-Template['header-auth'].helpers({
+Template['headerauth'].helpers({
     getClass: function () {
         return prepNavbarClasses();
     }
