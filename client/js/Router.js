@@ -38,11 +38,17 @@ FlowRouter.route('/signup',{
     }
 });
 
-FlowRouter.route('/app',{
+var approutes = FlowRouter.group({
     subscriptions: function(params) {
-        console.log('flow sub');
         this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+    }
+});
+
+approutes.route('/app',{
+    //subscriptions: function(params) {
+    //    console.log('flow sub');
+    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+    //},
     action: function() {
         console.log('/app route');
         FlowLayout.render('layout-auth', { header: "header-auth", content: "app", menu: "layout-menu"});
@@ -60,27 +66,28 @@ FlowRouter.route('/help-signin',{
     }
 });
 
-FlowRouter.route('/inbox',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+approutes.route('/inbox',{
+    //subscriptions: function(params) {
+    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+    //},
     action: function() {
         console.log('/inbox route');
         FlowLayout.render('layout-auth', { content: "inbox"});
     }
 });
 
-FlowRouter.route('/next/today',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+var next = approutes.group({
+    prefix: '/next'
+});
+
+next.route('/today',{
     action: function() {
         console.log('/next/today route');
         FlowLayout.render('layout-auth', { content: "today"});
     }
 });
 
-FlowRouter.route('/next/thisweek',{
+next.route('/thisweek',{
     subscriptions: function(params) {
         this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
     },
@@ -90,180 +97,137 @@ FlowRouter.route('/next/thisweek',{
     }
 });
 
-FlowRouter.route('/next/soon',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+next.route('/soon',{
     action: function() {
         console.log('/next/today route');
         FlowLayout.render('layout-auth', { content: "soon"});
     }
 });
 
-FlowRouter.route('/focus',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+approutes.route('/focus',{
     action: function() {
         console.log('/focus route');
         FlowLayout.render('layout-auth', { content: "focus"});
     }
 });
 
-FlowRouter.route('/waitingfor',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+approutes.route('/waitingfor',{
     action: function() {
         console.log('/waitingfor route');
         FlowLayout.render('layout-auth', { content: "waitingfor"});
     }
 });
 
-FlowRouter.route('/scheduled/calendar',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+var scheduled = approutes.group({
+    prefix: '/scheduled'
+});
+
+
+scheduled.route('/calendar',{
     action: function() {
         console.log('/waitingfor route');
         FlowLayout.render('layout-auth', { content: "calendar"});
     }
 });
 
-FlowRouter.route('/scheduled/reminders',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+scheduled.route('/reminders',{
     action: function() {
         console.log('/scheduled/reminders route');
         FlowLayout.render('layout-auth', { content: "reminders"});
     }
 });
 
-FlowRouter.route('/someday',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+approutes.route('/someday',{
     action: function() {
         console.log('/someday route');
         FlowLayout.render('layout-auth', { content: "someday"});
     }
 });
 
-FlowRouter.route('/projects/1',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+
+approutes.route('/projects/:id',{
     action: function() {
-        console.log('/projects/1 route');
+        console.log('/projects/1 route id: ' + params.id);
         FlowLayout.render('layout-auth', { content: "project"});
     }
 });
 
-FlowRouter.route('/projects/2',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
-    action: function() {
-        console.log('/projects/2 route');
-        FlowLayout.render('layout-auth', { content: "project"});
-    }
-});
-
-FlowRouter.route('/projects/3',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
-    action: function() {
-        console.log('/projects/3 route');
-        FlowLayout.render('layout-auth', { content: "project"});
-    }
-});
-
-FlowRouter.route('/review',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+approutes.route('/review',{
     action: function() {
         console.log('/review route');
         FlowLayout.render('layout-auth', { content: "review"});
     }
 });
 
-FlowRouter.route('/lists/checklists',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+
+
+var lists = approutes.group({
+    prefix: '/lists'
+    //subscriptions: function(params) {
+    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+    //}
+});
+
+lists.route('/checklists',{
     action: function() {
         console.log('/lists/checklists route');
         FlowLayout.render('layout-auth', { content: "lists"});
     }
 });
 
-FlowRouter.route('/lists/reference',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+lists.route('/reference',{
     action: function() {
         console.log('/lists/reference route');
         FlowLayout.render('layout-auth', { content: "lists"});
     }
 });
 
-FlowRouter.route('/lists/done',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+lists.route('/done',{
     action: function() {
         console.log('/lists/done route');
         FlowLayout.render('layout-auth', { content: "lists"});
     }
 });
 
-FlowRouter.route('/contexts/roles',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+var contexts = approutes.group({
+    prefix: '/contexts',
+    //subscriptions: function(params) {
+    //    this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+    //}
+});
+
+contexts.route('/roles',{
     action: function() {
         console.log('/contexts/roles route');
         FlowLayout.render('layout-auth', { content: "roles"});
     }
 });
 
-FlowRouter.route('/contexts/roles',{
+contexts.route('/roles',{
     subscriptions: function(params) {
         this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
     },
     action: function() {
-        console.log('/contexts/roles route');
+        console.log('/roles route');
         FlowLayout.render('layout-auth', { content: "roles"});
     }
 });
 
-FlowRouter.route('/contexts/contexts',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+contexts.route('/contexts',{
     action: function() {
         console.log('/contexts/contexts route');
         FlowLayout.render('layout-auth', { content: "contexts"});
     }
 });
 
-FlowRouter.route('/contexts/flags',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+contexts.route('/flags',{
     action: function() {
         console.log('/contexts/flags route');
         FlowLayout.render('layout-auth', { content: "flags"});
     }
 });
 
-FlowRouter.route('/contexts/delegates',{
-    subscriptions: function(params) {
-        this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
-    },
+contexts.route('/delegates',{
     action: function() {
         console.log('/contexts/delegates route');
         FlowLayout.render('layout-auth', { content: "delegates"});

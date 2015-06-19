@@ -47,13 +47,21 @@ Template['menuitem'].events({
         Session.set("active-menuitem-id",event.currentTarget.id);
         Session.set("active-menuitem-class",$(event.currentTarget).data().color);
         Session.set("active-submenuitem-id",null);
-        FlowRouter.go($(event.currentTarget).data().route);
+        console.log("menuitem clicked: " + $(event.currentTarget).data().route);
+        var route = $(event.currentTarget).data().route;
+        if (route.trim().length > 0) {
+            FlowRouter.go(route);
+        }
     }
 });
 Template['submenuitem'].events({
     "click li.mm-subitem": function (event, template) {
         Session.set("active-submenuitem-id",event.currentTarget.id);
-        FlowRouter.go($(event.currentTarget).data().route);
+        var route = $(event.currentTarget).data().route;
+        if (route.trim().length > 0) {
+            FlowRouter.go(route);
+        }
+
     }
 });
 

@@ -13,7 +13,7 @@
 		"icon": "md-check-box",
 		"color" : "green",
 		"text": "Next",
-	    "route": "/next",
+	    "route": "",
 		"order": 2.0,
 		"subitems": [
 			{
@@ -68,7 +68,7 @@
 		"icon": "md-schedule",
 		"color" : "cyan",
 		"text": "Scheduled",
-	    "route": "/scheduled",
+	    "route": "",
 		"order": 5.0,
 		"subitems": [
 			{
@@ -105,7 +105,7 @@
 		"icon": "md-content-paste",
 		"color" : "pink",
 		"text": "Projects",
-  	    "route": "/projects",
+  	    "route": "",
 		"order": 7.0,
 		"subitems": [
 			{
@@ -151,7 +151,7 @@
 		"icon": "md-list",
 		"color" : "deep-purple",
 		"text": "Lists",
-	    "route": "/lists",
+	    "route": "",
 		"order": 9.0,
 		"subitems": [
 			{
@@ -197,7 +197,7 @@
 		"icon": "md-place",
 		"color" : "teal",
 		"text": "Contexts",
-	    "route": "/contexts",
+	    "route": "",
 		"order": 10.0,
 		"subitems": [
 			{
