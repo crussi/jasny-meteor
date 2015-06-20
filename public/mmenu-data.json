@@ -1,5 +1,6 @@
 [
 	{
+	    "parentkey" : "",
 		"key" : "0nCp9fPv5kqKLqE7RO6E9Q",
 		"icon": "md-inbox",
 		"color" : "blue",
@@ -9,6 +10,7 @@
 		"subitems": []
 	},
 	{
+  	    "parentkey" : "",
 		"key" : "O5T2A74BCk6pzxdbtMmZ6Q",
 		"icon": "md-check-box",
 		"color" : "green",
@@ -17,6 +19,7 @@
 		"order": 2.0,
 		"subitems": [
 			{
+			  	"parentkey" : "O5T2A74BCk6pzxdbtMmZ6Q",
 				"key" : "vss07n7_Pk_qfjTsB4yalQ",
 				"icon": "md-today",
 				"color" : "green",
@@ -26,6 +29,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "O5T2A74BCk6pzxdbtMmZ6Q",
 				"key" : "AUzMFwtJ_0Kv-v_KCx59tg",
 				"icon": "md-event-note",
 				"color" : "green",
@@ -35,6 +39,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "O5T2A74BCk6pzxdbtMmZ6Q",
 				"key" : "cwTNXC_ZBke22gWfz9_2sQ",
 				"icon": "md-event-available",
 				"color" : "green",
@@ -46,6 +51,7 @@
 		]
 	},
 	{
+	    "parentkey" : "",
 		"key" : "5Rq-WhLDeEqsJzXJmH8NJg",
 		"icon": "md-star",
 		"color" : "red",
@@ -55,6 +61,7 @@
 		"subitems": []
 	},
 	{
+	    "parentkey" : "",
 		"key" : "U9doy5KyzEKLvrNAmAPl_Q",
 		"icon": "md-account-box",
 		"color" : "orange",
@@ -64,6 +71,7 @@
 		"subitems": []
 	},
 	{
+	    "parentkey" : "",
 		"key" : "8L-xNZxCYkudclGimYxs1w",
 		"icon": "md-schedule",
 		"color" : "cyan",
@@ -72,6 +80,7 @@
 		"order": 5.0,
 		"subitems": [
 			{
+			    "parentkey" : "8L-xNZxCYkudclGimYxs1w",
 				"key" : "8A4nUpY3DEqMX6JvuoBMnw",
 				"icon": "md-today",
 				"color" : "cyan",
@@ -81,6 +90,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "8L-xNZxCYkudclGimYxs1w",
 				"key" : "gIegCkCGVEm_zvwLN-9RBQ",
 				"icon": "md-notifications",
 				"color" : "cyan",
@@ -92,6 +102,7 @@
 		]
 	},
 	{
+	    "parentkey" : "",
 		"key" : "8YxCCVb24kK-zUCr-rT44Q",
 		"icon": "md-pause",
 		"color" : "purple",
@@ -101,6 +112,7 @@
 		"subitems": []
 	},	
 	{
+	    "parentkey" : "",
 		"key" : "YZO1mzB7EkSlpY-R4ascNg",
 		"icon": "md-content-paste",
 		"color" : "pink",
@@ -109,6 +121,7 @@
 		"order": 7.0,
 		"subitems": [
 			{
+			    "parentkey" : "YZO1mzB7EkSlpY-R4ascNg",
 				"key" : "rCDOWbA8S0G2K7PcWZ78bg",
 				"icon": "md-assignment",
 				"color" : "pink",
@@ -118,6 +131,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "YZO1mzB7EkSlpY-R4ascNg",
 				"key" : "g9jGRI612ESBPUnjNwld7A",
 				"icon": "md-assignment",
 				"color" : "pink",
@@ -127,6 +141,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "YZO1mzB7EkSlpY-R4ascNg",
 				"key" : "Wmc1O0gjjEi1-AgJFvcI8w",
 				"icon": "md-assignment",
 				"color" : "pink",
@@ -138,6 +153,7 @@
 		]
 	},
 	{
+	    "parentkey" : "",
 		"key" : "vaHpKO7b10iLzS4qWu21lA",
 		"icon": "md-local-cafe",
 		"color" : "brown",
@@ -147,6 +163,7 @@
 		"subitems": []
 	},
 	{
+	    "parentkey" : "",
 		"key" : "bN2CR3r9_0iEN5W2fPufcw",
 		"icon": "md-list",
 		"color" : "deep-purple",
@@ -155,6 +172,7 @@
 		"order": 9.0,
 		"subitems": [
 			{
+			    "parentkey" : "bN2CR3r9_0iEN5W2fPufcw",
 				"key" : "_Cv7vpHf8Ui7Hijl3zk32Q",
 				"icon": "md-list",
 				"color" : "deep-purple",
@@ -164,6 +182,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "bN2CR3r9_0iEN5W2fPufcw",
 				"key" : "h8E9ZRNlLUWX3LDSPrhcZA",
 				"icon": "md-book",
 				"color" : "deep-purple",
@@ -173,6 +192,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "bN2CR3r9_0iEN5W2fPufcw",
 				"key" : "j8mXBFrNxE2k5B9dHyNDNQ",
 				"icon": "md-archive",
 				"color" : "deep-purple",
@@ -182,8 +202,9 @@
 				"subitems": []				
 			},
 			{
-				"key" : "Z5hyGkNCLkWKgbZONxF0Jw",
-				"icon": "md-delete",
+			    "parentkey" : "bN2CR3r9_0iEN5W2fPufcw",
+			    "key" : "Z5hyGkNCLkWKgbZONxF0Jw",
+			    "icon": "md-delete",
 				"color" : "deep-purple",
 				"text": "Trash",
 			    "route": "/lists/done",
@@ -193,6 +214,7 @@
 		]
 	},	
 	{
+	    "parentkey" : "",
 		"key" : "tu5LZyQbCUWJBblHAiPE4A",
 		"icon": "md-place",
 		"color" : "teal",
@@ -201,6 +223,7 @@
 		"order": 10.0,
 		"subitems": [
 			{
+			    "parentkey" : "tu5LZyQbCUWJBblHAiPE4A",
 				"key" : "PyIsSaL0R0Sw0aMjeWgxiA",
 				"icon": "md-local-offer",
 				"color" : "teal",
@@ -210,6 +233,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "tu5LZyQbCUWJBblHAiPE4A",
 				"key" : "Ms2qsW8ZKUWak3oYYs2Wyw",
 				"icon": "md-place",
 				"color" : "teal",
@@ -219,6 +243,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "tu5LZyQbCUWJBblHAiPE4A",
 				"key" : "7HSzd3M5H0add3Fb5fcArQ",
 				"icon": "md-flag",
 				"color" : "teal",
@@ -228,6 +253,7 @@
 				"subitems": []				
 			},
 			{
+			    "parentkey" : "tu5LZyQbCUWJBblHAiPE4A",
 				"key" : "aIVMd5si3kyT-LJdsot7Dw",
 				"icon": "md-account-box",
 				"color" : "teal",
@@ -239,6 +265,7 @@
 		]
 	},	
 	{
+	    "parentkey" : "",
 		"key" : "xgGK1zVuFkSglWGP85XSpA",
 		"icon": "md-settings",
 		"color" : "indigo",
