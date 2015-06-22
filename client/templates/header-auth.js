@@ -5,8 +5,9 @@ formatId = function (data) {
 
 prepNavbarClasses = function () {
     var bsclasses = 'navbar navbar-inverse navbar-default navbar-fixed-top ';
-    var activeclass = Session.get("active-menuitem-class");
-    return bsclasses + activeclass ? activeclass + '-500-bg' : '';
+    var activeclass = Session.getJSON('activemenu.color') || 'blue';
+    console.log('prepNavbarClasses ' + Session.getJSON('activemenu.color'));
+    return bsclasses + activeclass + '-500-bg';
 }
 
 

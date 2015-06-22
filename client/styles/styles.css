@@ -175,8 +175,8 @@ nav#nav-auth.mm-closed a.navbar-brand
         margin-right: 10px;
     }
     .navbar-nav > li > a.has-image {
-        padding-top: 10px;
-        padding-bottom: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 

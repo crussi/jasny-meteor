@@ -38,6 +38,8 @@ handleMenuClick = function (mnu) {
     //menuHelper.setState(mnu);
     if (menuHelper.hasRoute(mnu)) {
         FlowRouter.go(mnu.route);
+    } else {
+        menuHelper.setState(mnu);
     }
 }
 
