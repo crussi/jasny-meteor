@@ -207,7 +207,7 @@
 			    "icon": "md-delete",
 				"color" : "deep-purple",
 				"text": "Trash",
-			    "route": "/lists/done",
+			    "route": "/lists/trash",
 				"order": 9.4,
 				"subitems": []				
 			}									

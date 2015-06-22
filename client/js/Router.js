@@ -99,14 +99,14 @@ var scheduled = approutes.group({
 
 scheduled.route('/calendar',{
     action: function() {
-        menuHelper.setStateByRoute('/calendar');
+        menuHelper.setStateByRoute('/scheduled/calendar');
         FlowLayout.render('layout-auth', { content: "calendar"});
     }
 });
 
 scheduled.route('/reminders',{
     action: function() {
-        menuHelper.setStateByRoute('/reminders');
+        menuHelper.setStateByRoute('/scheduled/reminders');
         FlowLayout.render('layout-auth', { content: "reminders"});
     }
 });
@@ -136,7 +136,7 @@ var lists = approutes.group({
     prefix: '/lists'
 });
 
-lists.route('/:checklists',{
+lists.route('/checklists',{
     action: function() {
         menuHelper.setStateByRoute('/lists/checklists');
         FlowLayout.render('layout-auth', { content: "lists"});
@@ -153,6 +153,13 @@ lists.route('/reference',{
 lists.route('/done',{
     action: function() {
         menuHelper.setStateByRoute('/lists/done');
+        FlowLayout.render('layout-auth', { content: "lists"});
+    }
+});
+
+lists.route('/trash',{
+    action: function() {
+        menuHelper.setStateByRoute('/lists/trash');
         FlowLayout.render('layout-auth', { content: "lists"});
     }
 });
