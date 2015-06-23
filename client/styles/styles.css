@@ -189,9 +189,6 @@ nav#nav-auth.mm-closed a.navbar-brand
             display: none;
         }
 }
-@media (max-width: 749px) {
-
-}
 
 @media (min-width: 1200px) {
     .container {
@@ -236,9 +233,10 @@ nav#nav-auth.mm-closed a.navbar-brand
 li.mm-item li.active {
     background-color: rgba(0,0,0,.05);
 }
-li:hover {
-    background-color: rgba(0,0,0,.035);
-}
+/*navbar li dark bg on hover removed */
+/*li:hover {*/
+    /*background-color: rgba(0,0,0,.035);*/
+/*}*/
 #nav-auth {
     background-color: #2196F3;
     color: rgba(255, 255, 255, 0.84);
