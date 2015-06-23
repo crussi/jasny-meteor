@@ -3,11 +3,12 @@ formatId = function (data) {
     return (data && data._str) || data;
 }
 
-prepNavbarClasses = function () {
-    var bsclasses = 'navbar navbar-inverse navbar-default navbar-fixed-top ';
+prepNavbarClasses = function (hdrtype) {
+    var bsclasses = 'navbar navbar-fixed-top ';
     var activeclass = Session.getJSON('activemenu.color') || 'blue';
+    var weight = hdrtype === 'logo' ? '700' : '500';
     console.log('prepNavbarClasses ' + Session.getJSON('activemenu.color'));
-    return bsclasses + activeclass + '-500-bg';
+    return bsclasses + activeclass + '-' + weight + '-bg';
 }
 
 
@@ -29,12 +30,12 @@ Template['headerauth'].events({
 });
 Template['headerauth'].helpers({
     getClass: function () {
-        return prepNavbarClasses();
+        return prepNavbarClasses('headerauth');
     }
 });
 Template['logo'].helpers({
     getClass: function () {
-        return prepNavbarClasses();
+        return prepNavbarClasses('logo');
     }
 });
 
