@@ -1,4 +1,4 @@
-Template['header-unauth'].events({
+Template['headerunauth'].events({
     'click #signin' : function(e, t) {
         console.log('signin');
         FlowRouter.go('/signin');

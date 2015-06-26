@@ -14,7 +14,48 @@
                 <li><a href="#"><i class="md-list"></i></a></li>
                 <li><a href="#"><i class="md-more-vert"></i></a></li>
                 <li><a href="#"><i class="md-apps "></i></a></li>
-                <li id="profile"><a class="has-image" href="#"><img class="profile-img-sml" src="/images/profilepic32.jpg"></a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="md-apps "></i></a>
+                    <ul class="dropdown-menu dm-icon pull-right">
+                        <li>
+                            <a data-action="fullscreen" href=""><i class="md md-fullscreen"></i> Toggle Fullscreen</a>
+                        </li>
+                        <li>
+                            <a data-action="clear-localstorage" href=""><i class="md md-delete"></i> Clear Local Storage</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="md md-person"></i> Privacy Settings</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="md md-settings"></i> Other Settings</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li id="profile" class="dropdown">
+                    <a data-toggle="dropdown" class="has-image" href="#"><img class="profile-img-sml" src="/images/profilepic32.jpg"></a>
+                    <div id="profile-menu" class="dropdown-menu pull-right">
+                        <div class="listview">
+                            <div class="lv-profile c-overflow">
+                                <a class="lv-item" href="">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img src="/images/profilepic56.png" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">{{userName}}</div>
+                                            <small class="lv-small">name@gmail.com</small>
+                                            <button id="account" class="btn btn-primary btn-raised btn-sm">My Account</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lv-footer-btns" href="">
+                                <button class="btn btn-default btn-raised pull-right">Sign out</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
 
         </div>

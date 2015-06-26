@@ -1,0 +1,65 @@
+/* bootstrap overrides */
+.navbar-right {
+    margin-right: 10px;
+    float: right;
+}
+.pull-right {
+    float: right !important;
+}
+@media (min-width: 750px) {
+    /*.navbar-right {*/
+    /*margin-right: 10px;*/
+    /*}*/
+    .navbar-nav > li > a.has-image {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .navbar-more {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        /*width: 1170px;*/
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-header {
+        width: 100%;
+    }
+}
+
+.btn-primary:not(.btn-link):not(.btn-flat) {
+    background-color: #2196F3;
+    color: rgba(255, 255, 255, 0.84);
+}
+.btn-primary:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #42A5F5;
+}
+.btn-primary:active:not(.btn-link):not(.btn-flat) {
+    background-color: #2196F3;
+}
+
+
+.btn-plain:not(.btn-link):not(.btn-flat) {
+    /*background-color: #2196F3;*/
+    color: rgba(255, 255, 255, 0.84);
+}
+/*.btn-plain:hover:not(.btn-link):not(.btn-flat) {*/
+    /*background-color: #42A5F5;*/
+/*}*/
+/*.btn-plain:active:not(.btn-link):not(.btn-flat) {*/
+    /*background-color: #2196F3;*/
+/*}*/
+
+/*.btn-blue-400:not(.btn-link):not(.btn-flat) {*/
+    /*background-color: #42A5F5;*/
+    /*color: rgba(255,255,255,.84);*/
+/*}*/
+/*.btn-blue-500:not(.btn-link):not(.btn-flat) {*/
+    /*background-color: #2196F3;*/
+    /*color: rgba(255,255,255,.84);*/
+/*}*/

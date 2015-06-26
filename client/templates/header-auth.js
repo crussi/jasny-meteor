@@ -31,7 +31,11 @@ Template['headerauth'].events({
 Template['headerauth'].helpers({
     getClass: function () {
         return prepNavbarClasses('headerauth');
-    }
+    },
+    userName: function() {
+        return Meteor.user().profile.name;
+    },
+
 });
 Template['logo'].helpers({
     getClass: function () {

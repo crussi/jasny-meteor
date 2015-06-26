@@ -1,0 +1,41 @@
+#profile-menu {
+  width: 300px;
+    padding: 0;
+}
+#profile-menu .listview .lv-footer > button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#profile-menu .listview {
+  background-color: #fff;
+}
+
+#profile-menu,
+#profile-menu .lv-footer > button {
+  background-color: #eee;  
+}
+
+#profile-menu .listview a.lv-item:hover {
+  background: #fff;
+}
+#profile-menu img {
+    width:100px; 
+    height: auto;
+}
+
+#profile-menu button#account {
+	margin-top: 20px;
+
+}
+#profile-menu .lv-footer-btns {
+  display: block;
+  text-align: center;
+  /*padding: 7px 10px 8px;*/
+  border-top: 1px solid #ccc;
+  line-height: 100%;
+  font-size: 11px;
+  margin-top: 20px;
+  color: #828282;
+}

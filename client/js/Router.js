@@ -8,7 +8,7 @@ FlowRouter.route('/',{
         if (Meteor.user()) {
             FlowLayout.render('layout-auth', { content: "dashboard"});
         } else {
-            FlowLayout.render('layout-unauth', { header: "header-unauth", content: "content-mktg"});
+            FlowLayout.render('layout-unauth', { header: "headerunauth", content: "content-mktg"});
         }
 
     }
@@ -19,7 +19,7 @@ FlowRouter.route('/signin',{
     },
     action: function() {
         console.log('/signin route');
-        FlowLayout.render('layout-unauth', { header: "header-unauth", content: "signin"});
+        FlowLayout.render('layout-unauth', { header: "headerunauth", content: "signin"});
     }
 });
 
@@ -29,7 +29,7 @@ FlowRouter.route('/signup',{
 
     },
     action: function() {
-        FlowLayout.render('layout-unauth', { header: "header-unauth", content: "signup"});
+        FlowLayout.render('layout-unauth', { header: "headerunauth", content: "signup"});
     }
 });
 
