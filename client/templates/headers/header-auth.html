@@ -10,35 +10,25 @@
 
             <ul class="top-menu pull-right">
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="md-message"></i></a>
+                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="toolbar md-message"></i></a>
                     {{>messagesdropdown}}
                 </li>
                 <li>
-                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="md-notifications"></i></a>
+                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="toolbar md-notifications"></i></a>
                     {{>remindersdropdown}}
                 </li>
                 <li>
-                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="md-list"></i></a>
+                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="toolbar md-list"></i></a>
                     {{>tasksdropdown}}
                 </li>
-                <li><a href="#"><i class="md-more-vert"></i></a></li>
-                <li><a href="#"><i class="md-apps "></i></a></li>
+                <li>
+                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="toolbar md-more-vert"></i></a>
+                    {{>moredropdown}}
+                </li>
+
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="md-apps "></i></a>
-                    <ul class="dropdown-menu dm-icon pull-right">
-                        <li>
-                            <a data-action="fullscreen" href=""><i class="md md-fullscreen"></i> Toggle Fullscreen</a>
-                        </li>
-                        <li>
-                            <a data-action="clear-localstorage" href=""><i class="md md-delete"></i> Clear Local Storage</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="md md-person"></i> Privacy Settings</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="md md-settings"></i> Other Settings</a>
-                        </li>
-                    </ul>
+                    <a data-toggle="dropdown" class="tm-settings" href=""><i class="toolbar md-apps "></i></a>
+                    {{>appsdropdown}}
                 </li>
 
                 <li id="profile" class="dropdown">

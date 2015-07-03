@@ -6,10 +6,6 @@ Template['profilesignout'].events({
     "click #account": function () {
         console.log("profile clicked");
         FlowRouter.go('/settings/profile');
-    },
-    "click #clearstate": function () {
-        console.log("clear state clicked");
-        renderDashboard();
     }
 });
 

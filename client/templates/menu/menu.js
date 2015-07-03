@@ -34,7 +34,8 @@ Template['submenuitem'].helpers({
         return menuHelper.isActive(this) ? this.color + "-500" : "";
     }
 });
-handleMenuClick = function (mnu) {
+
+function handleMenuClick (mnu) {
     //menuHelper.setState(mnu);
     if (menuHelper.hasRoute(mnu)) {
         FlowRouter.go(mnu.route);

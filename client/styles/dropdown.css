@@ -45,7 +45,7 @@
   color: #4C4C4C;
 }
 .dropdown-menu:not([class*="bgm-"]) > li > a:hover {
-  color: #000;
+  color: #000 !important;
 }
 .dropdown-menu[class*="bgm-"] > li > a {
   font-weight: 300;
