@@ -56,6 +56,15 @@ nav#nav-auth.mm-closed a.navbar-brand
     margin-top: 15px;
 }
 
+#headerunauth .btn-primary-orange {
+    margin-left: 10px;
+}
+
+a#signin,a#signin:hover,a#signin:focus,
+a#signup,a#signup:hover,a#signup:focus {
+    color: #999;
+}
+
 /*.navbar.navbar, .navbar-default.navbar {*/
     /*background-color: #4285f4;*/
     /*color: rgba(255, 255, 255, 0.84);*/
@@ -372,7 +381,7 @@ li.mm-item li.active {
 }
 .form-auth .checkbox input[type="checkbox"], .form-auth .checkbox-inline input[type="checkbox"] {
     position: relative;
-    margin-top: 4px \9;
+    margin-top: 4px;
     margin-left: 0px;
 }
 .form-auth .form-control
@@ -380,7 +389,7 @@ li.mm-item li.active {
     position: relative;
     font-size: 16px;
     height: auto;
-    padding: 10px;
+    /*padding: 10px;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -393,7 +402,8 @@ li.mm-item li.active {
 .form-auth div.form-group input[type="text"],
 .form-auth div.form-group input[type="password"]
 {
-    margin-bottom: -1px;
+    /*margin-bottom: -1px;*/
+    margin-bottom: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;

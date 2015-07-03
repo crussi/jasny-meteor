@@ -7,7 +7,7 @@ prepNavbarClasses = function (hdrtype) {
     var bsclasses = 'navbar navbar-fixed-top ';
     var activeclass = Session.getJSON('activemenu.color') || 'blue';
     var weight = hdrtype === 'logo' ? '700' : '500';
-    console.log('prepNavbarClasses ' + Session.getJSON('activemenu.color'));
+    //console.log('prepNavbarClasses ' + Session.getJSON('activemenu.color'));
     return bsclasses + activeclass + '-' + weight + '-bg';
 }
 
@@ -31,11 +31,7 @@ Template['headerauth'].events({
 Template['headerauth'].helpers({
     getClass: function () {
         return prepNavbarClasses('headerauth');
-    },
-    userName: function() {
-        return Meteor.user().profile.name;
-    },
-
+    }
 });
 Template['logo'].helpers({
     getClass: function () {

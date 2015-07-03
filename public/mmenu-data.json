@@ -270,8 +270,30 @@
 		"icon": "md-settings",
 		"color" : "indigo",
 		"text": "Settings",
-	    "route": "/settings",
+	    "route": "",
 		"order": 11.0,
-		"subitems": []
+		"subitems": [
+		  {
+			"parentkey" : "xgGK1zVuFkSglWGP85XSpA",
+			"key" : "XyIsSaL0R0tw0aMjeWgxiB",
+			"icon": "md-account-circle",
+			"color" : "indigo",
+			"text": "Profile",
+			"route": "/settings/profile",
+			"order": 11.1,
+			"subitems": []
+		  },
+		  {
+			"parentkey" : "xgGK1zVuFkSglWGP85XSpA",
+			"key" : "uVd43eLLO0y2jXVdEOwVBw",
+			"icon": "md-settings",
+			"color" : "indigo",
+			"text": "General",
+			"route": "/settings/general",
+			"order": 11.2,
+			"subitems": []
+		  }
+
+		]
 	}	
 ]

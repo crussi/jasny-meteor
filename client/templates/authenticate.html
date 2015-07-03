@@ -66,7 +66,7 @@
 <template name="authInput">
 
     <div class="form-group {{errorClass submitted errorMessage}}">
-        <input id={{id}} type={{type}} placeholder={{label}} class="form-control reactive-element" value={{value}}>
+        <input id={{id}} type={{type}} placeholder={{label}} class="form-control floating-label reactive-element" value={{value}}>
 
         {{#if submitted}}
             {{#if errorMessage}}<label class="control-label">{{errorMessage}}</label>{{/if}}
@@ -98,7 +98,7 @@
         {{> Template.contentBlock data=data context=context }}
         {{#if isSignin}}
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <label class="checkbox pull-left">
+            <label class="checkbox">
                 <input type="checkbox" value="remember-me">
                 Stay signed in
             </label>

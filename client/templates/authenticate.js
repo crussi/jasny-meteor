@@ -1,9 +1,19 @@
+logout = function() {
+    console.log("logout func");
+    Meteor.logout(function(err) {
+        if (!err) {
+            hideSideMenu();
+            FlowRouter.go('/signin');
+        } else {
+            console.log('problem logging out!!!');
+        }
+    });
+
+}
 
 SimpleSchema.messages({
     "passwordMismatch": "Passwords do not match"
 });
-
-
 
 Template['authInput'].helpers({
     errorClass : function(submitted, errorMessage) {
@@ -192,7 +202,6 @@ Template['authFormBlock'].events({
     }
 });
 
-
 Template['help-signin'].events({
     'click #back' : function(e, t) {
         e.preventDefault();
@@ -207,11 +216,11 @@ Template['help-signup'].events({
     }
 });
 
+
 Template['app'].events({
     'click #logout' : function(e, t) {
         e.preventDefault();
-        Meteor.logout();
-        FlowRouter.go('/signin');
+        logout();
     }
 });
 

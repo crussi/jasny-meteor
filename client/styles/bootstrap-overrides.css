@@ -43,6 +43,17 @@
     background-color: #2196F3;
 }
 
+.btn-primary-orange:not(.btn-link):not(.btn-flat) {
+    background-color: #FF9800;
+    color: rgba(255, 255, 255, 0.84);
+}
+.btn-primary-orange:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #FFA726;
+}
+.btn-primary-orange:active:not(.btn-link):not(.btn-flat) {
+    background-color: #FF9800;
+}
+
 
 .btn-plain:not(.btn-link):not(.btn-flat) {
     /*background-color: #2196F3;*/

@@ -1,4 +1,10 @@
 
+renderDashboard = function() {
+    console.log('renderDashboard');
+    menuHelper.clearState();
+    //FlowRouter.go('/dashboard');
+    FlowLayout.render('layout-auth', { content: "dashboard"});
+}
 
 FlowRouter.route('/',{
     subscriptions: function(params) {
@@ -6,7 +12,8 @@ FlowRouter.route('/',{
     },
     action: function() {
         if (Meteor.user()) {
-            FlowLayout.render('layout-auth', { content: "dashboard"});
+            //FlowLayout.render('layout-auth', { content: "dashboard"});
+            renderDashboard();
         } else {
             FlowLayout.render('layout-unauth', { header: "headerunauth", content: "content-mktg"});
         }
@@ -18,8 +25,12 @@ FlowRouter.route('/signin',{
     subscriptions: function(params) {
     },
     action: function() {
-        console.log('/signin route');
-        FlowLayout.render('layout-unauth', { header: "headerunauth", content: "signin"});
+        if (Meteor.user()) {
+            renderDashboard();
+        } else {
+            FlowLayout.render('layout-unauth', { header: "headerunauth", content: "signin"});
+        }
+
     }
 });
 
@@ -29,7 +40,11 @@ FlowRouter.route('/signup',{
 
     },
     action: function() {
-        FlowLayout.render('layout-unauth', { header: "headerunauth", content: "signup"});
+        if (Meteor.user()) {
+            renderDashboard();
+        } else {
+            FlowLayout.render('layout-unauth', { header: "headerunauth", content: "signup"});
+        }
     }
 });
 
@@ -41,8 +56,7 @@ var approutes = FlowRouter.group({
 
 approutes.route('/dashboard',{
     action: function() {
-        menuHelper.clearState();
-        FlowLayout.render('layout-auth', { content: "dashboard"});
+        renderDashboard();
     }
 });
 
@@ -120,7 +134,8 @@ approutes.route('/someday',{
 
 approutes.route('/projects/:id',{
     action: function(params) {
-        console.log('/projects/1 route id: ' + params.id);
+        console.log('/projects/ route id: ' + params.id);
+        menuHelper.setStateByRoute('/projects/' + params.id);
         FlowLayout.render('layout-auth', { content: "project"});
     }
 });
@@ -196,9 +211,20 @@ contexts.route('/delegates',{
     }
 });
 
-approutes.route('/settings',{
+var settings = approutes.group({
+    prefix: '/settings',
+});
+
+settings.route('/general',{
     action: function() {
-        menuHelper.setStateByRoute('/settings');
+        menuHelper.setStateByRoute('/settings/general');
         FlowLayout.render('layout-auth', { content: "settings"});
+    }
+});
+settings.route('/profile',{
+    action: function() {
+        console.log('/profile');
+        menuHelper.setStateByRoute('/settings/profile');
+        FlowLayout.render('layout-auth', { content: "profile"});
     }
 });
