@@ -18,13 +18,15 @@ Template.registerHelper('formatId', function(data) {
 });
 
 Template['logo'].events({
-    "click .navbar-toggle": function () {
+    "click .navbar-toggle": function (e) {
+        e.preventDefault();
         navbarToggle();
     }
 });
 
 Template['headerauth'].events({
-    "click .navbar-toggle": function () {
+    "click .navbar-toggle": function (e) {
+        e.preventDefault();
         navbarToggle();
     }
 });

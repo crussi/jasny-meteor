@@ -1,10 +1,12 @@
 Template['profilesignout'].events({
-    "click #signout": function () {
+    "click #signout": function (e) {
         console.log("profile logout");
+        e.preventDefault();
         logout();
     },
-    "click #account": function () {
+    "click #account": function (e) {
         console.log("profile clicked");
+        e.preventDefault();
         FlowRouter.go('/settings/profile');
     }
 });

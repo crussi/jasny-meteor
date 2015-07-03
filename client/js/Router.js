@@ -1,9 +1,9 @@
 
 renderDashboard = function() {
     console.log('renderDashboard');
-    menuHelper.clearState();
-    //FlowRouter.go('/dashboard');
-    FlowLayout.render('layout-auth', { content: "dashboard"});
+
+    FlowRouter.go('/dashboard');
+    //FlowLayout.render('layout-auth', { content: "dashboard"});
 }
 
 FlowRouter.route('/',{
@@ -56,7 +56,9 @@ var approutes = FlowRouter.group({
 
 approutes.route('/dashboard',{
     action: function() {
-        renderDashboard();
+        //renderDashboard();
+        menuHelper.clearState();
+        FlowLayout.render('layout-auth', { content: "dashboard"});
     }
 });
 

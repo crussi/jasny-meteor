@@ -45,12 +45,14 @@ function handleMenuClick (mnu) {
 }
 
 Template['menuitem'].events({
-    "click li.mm-item": function (event, template) {
+    "click li.mm-item": function (e, template) {
+        e.preventDefault();
         handleMenuClick(this);
     }
 });
 Template['submenuitem'].events({
-    "click li.mm-item": function (event, template) {
+    "click li.mm-item": function (e, template) {
+        e.preventDefault();
         handleMenuClick(this);
     }
 });
