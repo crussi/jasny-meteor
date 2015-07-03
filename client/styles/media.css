@@ -1,0 +1,40 @@
+/*
+ * Media - Overriding the Media object to 3.2 version in order to prevent issues like text overflow.
+ */
+.media {
+    overflow: visible;
+}
+.media:before,
+.media:after {
+    content: " ";
+    display: table;
+}
+.media:after {
+    clear: both;
+}
+.media:before,
+.media:after {
+    content: " ";
+    display: table;
+}
+.media:after {
+    clear: both;
+}
+.media > .pull-left {
+    padding-right: 15px;
+}
+.media > .pull-right {
+    padding-left: 15px;
+}
+.media-heading {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.media-body {
+    zoom: 1;
+    display: block;
+    width: auto;
+}
+.media-object {
+    border-radius: 2px;
+}
