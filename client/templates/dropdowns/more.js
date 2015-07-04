@@ -26,6 +26,20 @@ handleDdMenuClick = function(id) {
             break;
         case 'clear-localstorage':
             console.log(action);
+            //e.preventDefault();
+
+            swal({
+                title: "Are you sure?",
+                text: "Local storage, for this application, will be deleted",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                closeOnConfirm: false
+            }, function(){
+                localStorage.clear();
+                swal("Done!", "Local storage has been cleared", "success");
+            });
             break;
         case 'clear-state':
             console.log(action);
