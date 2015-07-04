@@ -216,8 +216,11 @@ li.mm-item li.active {
 }
 /*navbar li dark bg on hover removed */
 /*li:hover {*/
-    /*background-color: rgba(0,0,0,.035);*/
+/*background-color: rgba(0,0,0,.035);*/
 /*}*/
+li.mm-item:hover {
+background-color: rgba(0,0,0,.035);
+}
 #nav-auth {
     background-color: #2196F3;
     color: rgba(255, 255, 255, 0.84);
