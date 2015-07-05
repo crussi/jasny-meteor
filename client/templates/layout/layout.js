@@ -42,6 +42,16 @@
         });
     });
 
+    Template['layout-auth'].onRendered(function () {
+        $(function() {
+            $.material.init();
+            //$.material.ripples();
+            //$.material.ripples();
+            //$.material.checkbox();
+            //$.material.radio();
+        });
+    });
+
     Template['layout-unauth'].onRendered(function () {
         $(function() {
             $.material.init();

@@ -1,7 +1,5 @@
-
-
-Template['messagesdropdown'].events({
-    "click .lv-item": function (e) {
+Template['remindersdropdown'].events({
+    "click .lv-item": function(e) {
         e.preventDefault();
         console.log(e.currentTarget.id);
     },

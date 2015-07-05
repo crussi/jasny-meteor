@@ -63,7 +63,8 @@
   display: block;
 }
 .listview a.lv-item:hover {
-  background: #ECF9FF;
+  /*background: #ECF9FF;*/
+  background: rgba(0, 0, 0, 0.075);
 }
 .listview [class*="lv-img"] {
   border-radius: 50%;
