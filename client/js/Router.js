@@ -51,6 +51,7 @@ FlowRouter.route('/signup',{
 var approutes = FlowRouter.group({
     subscriptions: function(params) {
         this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
+        this.register('todoToday', Meteor.subscribe('todotoday'));
     }
 });
 

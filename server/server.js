@@ -9,4 +9,10 @@ if (Meteor.isServer) {
         console.log('publish menu-items');
         return MenuItems.find({});
     });
+
+    Meteor.publish("todotoday", function () {
+        console.log('publish todotoday');
+        return TodoToday.find({});
+    });
+
 }

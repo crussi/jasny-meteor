@@ -1,0 +1,4 @@
+python -m SimpleHTTPServer 8000
+
+mongoimport --port 3001 --db meteor --collection menuitems --file public/mmenu-data.json --jsonArray
+mongoimport --port 3001 --db meteor --collection tasks --file public/todo-today-data.json --jsonArray
