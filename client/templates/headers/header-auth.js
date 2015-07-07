@@ -1,7 +1,5 @@
 
-formatId = function (data) {
-    return (data && data._str) || data;
-}
+
 
 prepNavbarClasses = function (hdrtype) {
     var bsclasses = 'navbar navbar-fixed-top ';

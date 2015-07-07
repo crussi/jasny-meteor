@@ -100,12 +100,12 @@
 </template>
 
 <template name="task">
-    <a id="Y6u253ydj0eEoSPhUOg-Zg" class="lv-item" href="">
+    <a id="{{formatId _id}}" class="lv-item" href="">
         <div class="media">
             <div class="pull-left">
-                <div id="Y6u253ydj0eEoSPhUOg-Zgcont" class="checkbox">
+                <div id="{{formatId _id}}-cont" class="checkbox">
                     <label>
-                        <input id="Y6u253ydj0eEoSPhUOg-Zgchk" type="checkbox" {{isChecked}}>
+                            <input id="{{formatId _id}}-chk" type="checkbox" {{isChecked}}>
                     </label>
                 </div>
             </div>

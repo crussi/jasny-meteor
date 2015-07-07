@@ -5,10 +5,17 @@ Template['tasksdropdown'].helpers({
     }
 });
 
+Template['tasksdropdown'].events({
+    "click .lv-footer": function(e){
+        e.preventDefault();
+        console.log('view all');
+    }
+});
+
 Template['task'].helpers({
     isChecked: function () {
         console.log('task isChecked');
-        return "checked";
+        return this.isDone() ? "checked" : "";
     }
 });
 
@@ -18,25 +25,26 @@ Template['task'].onRendered(function () {
     });
 });
 
-Template['tasksdropdown'].events({
+
+Template['task'].events({
     "click .lv-item": function(e) {
         e.preventDefault();
 
         console.log(e.currentTarget.id);
     },
-    "click .lv-footer": function(e){
-        e.preventDefault();
-        console.log('view all');
-    },
+
     "click div.checkbox": function(e,t){
         e.preventDefault();
         e.stopPropagation();
-        var id = e.currentTarget.id.substring(0, 22);
+        var id = e.currentTarget.id.split('-')[0];
         console.log('id: ' + id);
-        var chk = '#' + id + 'chk';
+        var chk = '#' + id + '-chk';
         console.log('chk: ' + chk);
         console.log($(chk).attr('id'));
-        $(chk).prop('checked', !$(chk).prop('checked'));
 
+        $(chk).prop('checked', !$(chk).prop('checked'));
+        //TodoToday.update({_id:id},{done:!$(chk).prop('checked')});
+        console.log('!$(chk).prop(checked): ' + !$(chk).prop('checked'));
+        Meteor.call("setChecked", this._id, $(chk).prop('checked'));
     }
 });
