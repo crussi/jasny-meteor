@@ -52,6 +52,7 @@ var approutes = FlowRouter.group({
     subscriptions: function(params) {
         this.register('menuItems', Meteor.subscribe('menu-items', params.postId));
         this.register('todoToday', Meteor.subscribe('todotoday'));
+        this.register('reminders', Meteor.subscribe('reminders'));
     }
 });
 
@@ -76,6 +77,7 @@ var next = approutes.group({
 
 next.route('/today',{
     action: function() {
+        console.log('router today');
         menuHelper.setStateByRoute('/next/today');
         FlowLayout.render('layout-auth', { content: "today"});
     }

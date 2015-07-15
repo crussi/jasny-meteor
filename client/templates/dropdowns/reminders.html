@@ -12,65 +12,42 @@
                 </ul>
             </div>
             <div class="lv-body c-overflow">
-                <a id="Y6u253ydj0eEoSPhUOg-Zg" class="lv-item" href="">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="md-notifications"></i>
-                        </div>
-                        <div class="media-body">
-                            <div class="lv-title">Scheduled appt</div>
-                            <small class="lv-small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
-                        </div>
-                    </div>
-                </a>
-                <a id="-DV4IupS5k_G5BRDS9WCvQ" class="lv-item" href="">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="md-notifications"></i>
-                        </div>
-                        <div class="media-body">
-                            <div class="lv-title">Healthy habit</div>
-                            <small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
-                        </div>
-                    </div>
-                </a>
-                <a id="6DHLfgyOt0Oziji6lF9Y8A" class="lv-item" href="">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="md-notifications"></i>
-                        </div>
-                        <div class="media-body">
-                            <div class="lv-title">Be proactive</div>
-                            <small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
-                        </div>
-                    </div>
-                </a>
-                <a id="fgm4s8UiKU6PaRybKV18oQ" class="lv-item" href="">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="md-notifications"></i>
-                        </div>
-                        <div class="media-body">
-                            <div class="lv-title">Scheduled event</div>
-                            <small class="lv-small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
-                        </div>
-                    </div>
-                </a>
-                <a id="BIZVzJQVakqMnckcn-PqPA" class="lv-item" href="">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="md-notifications"></i>
-                        </div>
-                        <div class="media-body">
-                            <div class="lv-title">Follow up</div>
-                            <small class="lv-small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
-                        </div>
-                    </div>
-                </a>
+                {{#each reminders}}
+                    {{> reminder}}
+                {{/each}}
             </div>
-
-            <a class="lv-footer" href="">View All</a>
         </div>
-
     </div>
 </template>
+
+<template name="reminder">
+    <a id="{{formatId _id}}" class="lv-item" href="">
+        <div class="media">
+            <div class="pull-left">
+                <i class="md-notifications"></i>
+            </div>
+            <div class="media-body">
+                <div class="lv-title">{{datedisplay}}</div>
+                <small class="lv-small">{{reminder}}</small>
+            </div>
+        </div>
+    </a>
+</template>
+
+<!--<template name="reminder">-->
+    <!--<a id="{{formatId _id}}" class="lv-item" href="">-->
+        <!--<div class="media">-->
+            <!--<div class="pull-left">-->
+                <!--<div id="{{formatId _id}}-cont" class="checkbox">-->
+                    <!--<label>-->
+                        <!--<input id="{{formatId _id}}-chk" type="checkbox" {{isChecked}}>-->
+                    <!--</label>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="media-body">-->
+                <!--<div class="lv-title">{{title}}</div>-->
+                <!--<small class="lv-small">{{description}}</small>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</a>-->
+<!--</template>-->

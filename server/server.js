@@ -15,6 +15,11 @@ if (Meteor.isServer) {
         return TodoToday.find({});
     });
 
+    Meteor.publish("reminders", function () {
+        console.log('publish reminders');
+        return Reminders.find({});
+    });
+
     Meteor.methods({
         addTask: function (text) {
             // Make sure the user is logged in before inserting a task

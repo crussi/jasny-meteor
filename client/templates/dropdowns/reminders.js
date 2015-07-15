@@ -1,4 +1,9 @@
 
+Template['remindersdropdown'].helpers({
+    reminders: function () {
+        return Reminders.find({});
+    }
+});
 
 Template['remindersdropdown'].events({
     "click .lv-item": function(e) {
